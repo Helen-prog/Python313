@@ -1,0 +1,66 @@
+*.jpg (jpeg)
+*.png
+*.gif
+
+left | center | right | top | bottom
+
+file:///D:/Python313/HTML/form/file.php?first-name=gfgfgh&psw=gfghfg
+file:///D:/Python313/HTML/form/form.html?first-name=fdfgd&psw=#file.php
+
+
+file:///D:/Python313/HTML/form/form.html?first-name=Olga&psw=123456#file.php
+file:///D:/Python313/HTML/form/form.html#file.php
+
+
+Shift + Alt + F
+file:///D:/Python313/JS/index.html?name1=Hello#text.php
+
+
+Win + R => cmd
+python
+py
+
+1.py
+
+print("Hello World!")
+
+quit()
+
+
+IDLE
+
+import keyword
+keyword.kwlist
+
+
+
+0-9
+
+ворона - 1
+
+вороны - 2 3 4
+
+ворон - 5 6 7 8 9 0
+
+Система контроля версий (Version Control Systems, VCS) — это система, сохраняющая изменения в одном или нескольких файлах так, чтобы потом можно было восстановить определённые старые версии.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
