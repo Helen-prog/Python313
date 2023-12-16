@@ -44,23 +44,79 @@ keyword.kwlist
 
 Система контроля версий (Version Control Systems, VCS) — это система, сохраняющая изменения в одном или нескольких файлах так, чтобы потом можно было восстановить определённые старые версии.
 
+git --version
+git --help
+
+git init 
+- создание репозитория (применяют один раз для одного репозитория)
+
+git status
+- проверка статуса репозитория (в каком состоянии репозиторий)
+
+git add -A
+		-A, --all - все файлы, которые находятся в папке и во свех подпапках
+		main.py - один файл
+		. - все файлы из текущей директории
 
 
+git config --global user.name 'new_user'
+git config --global user.name
+
+git config --global user.email 'test@mail.ru'
+git config --global user.email
+
+git commit -m "first commit"
+- создание конторольной точки
+
+text.txt
+folder
+	test.txt
+
+.gitignore
+
+git branch
+- просмотр веток
+
+git branch test
+- создали ветку
+
+git branch -D test
+- удаление ветки
 
 
+git branch readme
+
+git checkout readme
+- перейти на ветку readme
 
 
+readme.md
+git checkout master
 
 
+master	 ->		readme
+				readme.md
+				
+git merge readme
+- слияние ветки readme с веткой master				
+
+git branch -D readme
+
+git log
+- история коммитов
 
 
+токен
 
+Win + R => control
 
+https://github.com
+имя_пользователя
+токен
 
+git remote add origin https://github.com/Helen-prog/Python313.git
+git push -u origin master
 
-
-
-
-
+ceb3bafab983bc38d9bb392a09675cb6e8beecb7
 
 

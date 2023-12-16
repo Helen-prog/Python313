@@ -1603,3 +1603,5 @@
 #         city_name, city_population = city
 #         print("\tГород:", city_name, "население =", city_population)
 
+print("Вносим изменения")
+
