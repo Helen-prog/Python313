@@ -1606,5 +1606,3238 @@
 # print("Вносим изменения")
 
 
-print("Склонированный репозиторий")
+# print("Склонированный репозиторий")
 
+
+# Множества (set)
+
+# s = {"banana", "apple", "orange", "banana", "apple"}
+# print(s)
+# print(type(s))
+# print(len(s))
+
+# a = set("hello")
+# print(a, type(a))
+
+# c = ("red", "blue", "green", "red")
+#
+# a = set(c)
+# print(a, type(a))
+
+# mas = [1, 2, 3, 2, 3, 4, 4, 5]
+# s = {x for x in mas if x % 2 == 0}
+# print(s)
+
+# def to_set(element):
+#     st = set(element)
+#     return st, len(st)
+#
+#
+# print(to_set('я обычная строка'))
+# print(to_set([4, 5, 4, 6, 2, 9, 11, 3, 4, 2]))
+
+
+# t = {"red", "green", "blue"}
+# # print("green" not in t)
+# for i in t:
+#     print(i)
+
+# r = ['ab_1', 'ac_2', 'bc_1', 'bc_2']
+# # a = [i for i in r if 'a' not in i]
+# # a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in r]
+# a = ['A' + i[1:] if i[0] == 'a' else 'B' + i[1:] for i in r if i[1] == 'c']
+# print(a)
+
+# a = {"Tom", "Bob", "Alice"}
+# print(a)
+# a.add("Ann")
+# print(a)
+# # a.remove("Ann")  # при обращении к несуществующему элементу - ошибка KeyError
+# # print(a)
+# # user = "Ann"
+# # if user in a:
+# #     a.remove(user)
+# # print(a)
+# # a.discard("Ann1")
+# # print(a)
+# n = a.pop()
+# print(n)
+# print(a)
+# a.clear()
+# print(a)
+
+# a = {0, 1, 2, 3}
+# b = {4, 3, 2, 1}
+# # c = a.union(b)
+# # c = a | b
+# # a |= b
+# # c = a & b
+# a &= b
+# # c = a - b
+# # a -= b
+# # c = a ^ b
+# # a ^= b
+# # print(c)
+# print(a)
+
+# s1 = {1, 2}
+# s2 = {3}
+# s3 = {4, 5}
+# s4 = {3, 2, 6}
+# s5 = {6}
+# s6 = {7, 8}
+# s7 = {9, 8}
+#
+# # s = s1.union(s2, s3, s4, s5, s6, s7)
+# s = s1 | s2 | s3 | s4 | s5 | s6 | s7
+# print(s)
+# count = len(s)
+# print("Count:", count)
+# print("Min:", min(s))
+# print("Max:", max(s))
+# print("Sum:", sum(s))
+
+# s1 = set("Hello")
+# s2 = set("How are you")
+# a = s1 & s2
+# print(a)
+# for i in a:
+#     print(i, end=" ")
+
+# drawing = {'Марина', 'Женя', 'Света'}
+# music = {'Костя', 'Женя', 'Илья'}
+#
+# one_hobby = drawing ^ music
+# print("Один кружок:", one_hobby)
+#
+# both_hobbies = drawing & music
+# print("Оба кружка:", both_hobbies)
+#
+# # drawing = drawing - both_hobbies
+# drawing -= both_hobbies
+# print("Кружок рисования:", drawing)
+
+# a = {0, 1, 2, 3, 4}
+# b = {3, 2, 1}
+# print(a <= b)
+# print(a >= b)
+
+# Тип frozenset
+# s = frozenset([1, 2, 3, 4, 5])
+# print(s)
+# print(type(s))
+# a = frozenset({"hello", "world"})
+# print(a)
+
+# a = [8, 9, 7, 4, 5, 8, 7, 9, 4, 6, 5, 1, 2, 3, 5]
+# print(a)
+# b = set(a)
+# print(b)
+# a = tuple(b)
+# print(a)
+
+
+# Словарь  (dict)
+# lst = [1, 2, 3]
+# d = {'one': 1, 'two': 2, 'three': 3, 4: "four"}
+# lst[0] = 10
+# print(lst[0])
+# d['one'] = 10
+# print(d['one'])
+# print(d[4])
+
+# d = {'one': 1, 'two': 2, 'four': "four"}
+# print(d)
+# print(type(d))
+#
+# d1 = dict(one=1, two=2, four="four")
+# print(d1)
+# print(type(d1))
+
+# d = {0: 1, 'two': 2, (1, 2.3): "кортеж", True: [2, 3, 6, 7], 1: 45, False: (1, 2)}
+# {0: (1, 2), 'two': 2, (1, 2.3): "кортеж", True: 45}
+# d = {0: 1, 'two': 2, (1, 2.3): "кортеж", True: [2, 3, 6, 7]}
+# print(d)
+# print(d[True][1])
+# print(d[(1, 2.3)])
+# print(d['two'])
+# print(d[0])
+
+# lst = (('one', 1), ('two', 2), ('tree', 3))
+# d = dict(lst)
+# print(d)
+
+
+# d = {a: a ** 2 for a in range(7)}
+# print(d)
+
+
+# d = {'one': 1, 'two': 2, 'four': 4}
+#
+# # print('one1' in d)
+# key = "four1"
+#
+# # if key in d:
+# #     del d[key]
+#
+# try:
+#     del d[key]
+# except KeyError:
+#     print("Элемента с ключом " + key + " нет в словаре")
+#
+# for i in d:
+#     print(i, "->", d[i])
+
+# myDict = {'x1': 3, 'x2': 7, 'x3': 5, 'x4': -1}
+# composition = 1
+# for key in myDict:
+#     composition *= myDict[key]
+# print('Произведение:', composition)
+
+
+# d = dict()
+# d[1] = input("-> ")
+# d[2] = input("-> ")
+# d[3] = input("-> ")
+# d[4] = input("-> ")
+# d = {i: input("-> ") for i in range(1, 5)}
+# print(d)
+# dislike = int(input("Какой элемент исключить: "))
+# del d[dislike]
+# print(d)
+
+# myDict = {3: 'x1', 7: 'x2', 5: 'x3', -1: 'x4'}
+# print(sum(myDict))
+
+# goods = {
+#     '1': ['Core-i3-4330', 9, 4500],
+#     '2': ['Core i5-4670K', 3, 8500],
+#     '3': ['AMD FX-6300', 6, 3700],
+#     '4': ['Pentium G3220', 8, 2100],
+#     '5': ['Core i5-3450', 5, 6400]
+# }
+# for i in goods:
+#     print(i, ") ", goods[i][0], " - ", goods[i][1], " шт. по ", goods[i][2], "руб", sep="")
+
+# while True:
+#     n = input('№: ')  # '2'
+#     if n != '0':
+#         qty = int(input('Количество: '))  # 8
+#         try:
+#             goods[n][1] += qty  # goods[n][1] = goods[n][1] + qty  # goods['2'][1] = 8
+#         except KeyError:
+#             pass
+#     else:
+#         break
+
+# while True:
+#     n = input('№: ')
+#     if n != '0':
+#         if n in goods:
+#             qty = int(input('Количество: '))
+#             goods[n][1] += qty
+#         else:
+#             print("Некорректный номер товара! ❌")
+#     else:
+#         break
+
+# while True:
+#     n = input('№: ')
+#     if n != '0' and int(n) in range(len(goods) + 1):  # 9 in 0, 5
+#         qty = int(input('Количество: '))
+#         goods[n][1] += qty
+#     else:
+#         break
+
+# for i in goods:
+#     print(i, ") ", goods[i][0], " - ", goods[i][1], " шт. по ", goods[i][2], "руб", sep="")
+
+# d = {'a': 1, 'b': 2, 'c': 3}
+
+# print(d.keys())  # список ключей
+# print(d.values())  # список значений
+# print(d.items())  # список ключей и значений
+
+# for i, j in d.items():
+#     print(i, "->", j)
+
+# print(list(d.items()))
+
+# d = {'a': 1, 'c': 3, 'b': 2}
+#
+# # d2 = d.copy()
+# #
+# # print("d:", d, id(d))
+# # print("d2:", d2, id(d2))
+# #
+# # d2['a'] = 5
+# # d['e'] = 7
+# #
+# # print("d:", d, id(d))
+# # print("d2:", d2, id(d2))
+# #
+# # d.clear()  # очищает словарь
+# # print("d:", d, id(d))
+# # print("d2:", d2, id(d2))
+#
+# # print(d['e'])
+# # value = d.get('b', "Такого ключа не существует")
+# # print(value)
+# # item = d.pop('a', "Такого ключа не существует")
+# # item = d.popitem()
+# # print(item)
+# # print(d)
+#
+# d1 = {'r': 7, 'q': 40}
+# d.update(d1)
+# d2 = [('a', 20), ('b', 9)]  # 'a': 20, 'b': 9
+# d.update(d2)
+# print(d)
+
+# x = {
+#     'a': 1,
+#     'b': 2
+# }
+#
+# y = {
+#     'b': 3,
+#     'c': 4
+# }
+# # new_dict = x.copy()
+# # new_dict.update(y)
+# new_dict = x | y
+# print(new_dict)
+
+# a = {
+#     'first': {
+#         1: 'one',
+#         2: 'two',
+#         3: 'three'
+#     },
+#     'second': {
+#         4: 'four',
+#         5: 'five'
+#     }
+# }
+# print(a)
+# for x in a:
+#     print(x)
+#     for y in a[x]:
+#         print("\t", y, ": ", a[x][y], sep="")
+
+# sales = {"John": {"N": 3056, "S": 8463, "E": 8441, "W": 2694},
+#          "Tom": {"N": 4832, "S": 6786, "E": 4737, "W": 3612},
+#          "Anne": {"N": 5239, "S": 4802, "E": 5820, "W": 1859},
+#          "Fiona": {"N": 3904, "S": 3645, "E": 8821, "W": 2451}}
+#
+# for x in sales:
+#     print(x)
+#     for y in sales[x]:
+#         print("\t", y, ": ", sales[x][y], sep="")
+
+# person = input("Имя: ")
+# region = input("Регион: ")
+# print(sales[person][region])
+# new_data = int(input("Новое значение: "))
+#
+# sales[person][region] = new_data
+# print(sales[person])
+
+# try:
+#     person = input('Введите имя: ')
+#     saler = sales[person]
+#     try:
+#         region = input('Введите регион: ')
+#         new_data = int(input('Введите новое значение: '))
+#         sales[person][region] = new_data
+#         print(sales[person])
+#     except KeyError:
+#         print('Такого региона нет')
+#     except ValueError:
+#         print("Некорректный ввод объема продаж (числовое значение)")
+# except KeyError:
+#     print('Такого продавца нет.')
+
+# d = {"N": 3056, "S": 8463, "E": 8441, "W": 2694}
+# d = {value: key for key, value in d.items()}
+# print(d)
+#
+# d = {"N": 3056, "S": 8463, "E": 8441, "W": 2694}
+# d.update({value: key for key, value in d.items()})
+# print(d)
+
+# d = {"E": 3, "N": 1, "S": 2, "W": 4}  # {"N": 1, "S": 2}  # {"E": 3, "N": 1}
+# new_d = {k: v for k, v in d.items() if v <= 2}
+# print(new_d)
+
+# d = {'N': 1, 'S': 2, 'E': 3, 'W': 4}
+
+# for i in range(2):
+#     print('key:', list(d.items())[i][0], 'value:', list(d.items())[i][1])
+#
+# d = {'один': 1, 'два': 2, 'три': 3, 'четыре': 4}
+# c = list(d)
+# for key in c[:2]:
+#     print(f'{key}: {d[key]}')
+#
+# for key, value in list(d.items())[2:4]:
+#     print(f'{key}: {value}')
+#
+# value = list(d.items())
+# print(value)
+#
+# value = list(d.values())
+# print(value)
+#
+# value = list(d)
+# print(value)
+
+# a = [7, "one", 1, 2, 3, "two", 10, 20, "three", 15, 36, 60, "four", -20]
+#
+# d = dict()  # {}
+# current_key = ""
+#
+# for item in a:  # 10
+#     if type(item) == str:  # type(item) is str
+#         d[item] = []  # {"one": [1, 2, 3], "two": [10]}
+#         current_key = item  # current_key = "two"
+#     else:
+#         d[current_key].append(item)  # d["two"]
+#
+# print(d)
+
+# print(type(a[1]))
+
+# a = [7, 'one', 1, 2, 3, 'two', 10, 20, 'three', 15, 36, 60, 'four', -20]
+#
+# my_dict = dict()
+# for i in range(len(a)):
+#     if type(a[i]) is str:
+#         my_dict[a[i]] = []
+#         for j in range(i + 1, len(a)):
+#             if type(a[j]) is int:
+#                 my_dict[a[i]].append(a[j])
+#             else:
+#                 break
+# print(my_dict)
+
+
+# d = dict([(1, 'one'), (2, 'two'), (3, 'three')])
+# d = dict(zip([1, 2, 3], ['one', 'two', 'three']))
+# print(d)
+#
+# a = [1, 2, 3]
+# b = ['one', 'two', 'three']
+# f = {k: v for k, v in zip(b, a)}
+# print(f)
+
+# a = [1, 2, 3]
+# b = ['one', 'two', 'three']
+# d = [4.5, 7.4, 9.6]
+# # c = tuple(zip(a, b))
+# # c = list(zip(a, b))
+# # c = set(zip(a, b))
+# # c = dict(zip(a, b))
+# # c = list(zip(a, ))
+# c = list(zip(a, b, d))
+# print(c)
+
+# d_one = {'name': "Igor", "last_name": "Petrov", "job": "Consultant"}
+# d_two = {'name': "Irina", "last_name": "Irisova", "job": "Manager"}
+#
+# for (k1, v1), (k2, v2) in zip(d_one.items(), d_two.items()):
+#     print(k1, "->", v1)
+#     print(k2, "->", v2)
+
+
+# d = [(1, 'one'), (2, 'two'), (3, 'three')]
+# a, b = zip(*d)
+# print(a)
+# print(b)
+
+
+# a = ['two', 'one', 'three']
+# b = [3, 2, 1]
+#
+# d = list(zip(a, b))
+# print(d)
+#
+# d.sort()
+# print(d)
+# print(dict(d))
+
+# d = dict(zip(a, b))
+# print(d)
+# s = sorted(d.items())
+# print(s)
+# print(dict(s))
+
+
+# one = {'apple': 0.45, 'orange': 0.35, 'pepper': 0.7}
+# two = {'pepper': 0.2, 'onion': 0.55}
+# # print({**one, **two})  # {'apple': 0.45, 'orange': 0.35, 'pepper': 0.2, 'onion': 0.55}
+#
+# # print({**two, **one})  # {'pepper': 0.7, 'onion': 0.55, 'apple': 0.45, 'orange': 0.35}
+#
+# for k, v in {**two, **one}.items():
+#     print(k, "->", v)
+
+
+# data = ["red", "green", "blue"]
+# num = 1
+# for val in data:
+#     print(num, ") ", val, sep="")
+#     num += 1
+#
+# print()
+# for num, val in enumerate(data, 1):
+#     print(num, ") ", val, sep="")
+
+# month = ["January", "February", "March"]
+# total_sales = [52000.00, 51000.00, 48000.00]
+# prod_cost = [46800.00, 45900.00, 43200.00]
+#
+# for sales, costs, m in zip(total_sales, prod_cost, month):
+#     print(sales)
+#     profit = sales - costs
+#     print("Чистая прибыль в", m, "=", profit)
+
+# a = [1, 2, 3]
+# b = [*a, 4, 5, 6]
+# print(b)
+
+# def func(*args):
+#     return args
+#
+#
+# print(func(2))
+# print(func(2, 3, 4, "abc"))
+# print(func())
+
+# def summa(*params):
+#     res = 0
+#     for i in params:
+#         res += i
+#     return res
+#
+#
+# print(summa(1, 2, 3, 4, 5, 6, 7, 8, 9))
+# print(summa(3, 4, 5))
+
+# def to_dict(*args):
+#     return {element: element for element in args}
+#
+#
+# print(to_dict(1, 2, 3, 4))
+# print(to_dict("grey", (2, 17), 3.11, -4))
+
+
+# def func(*args):  # (1, 2, 3, 4, 5, 6, 7, 8, 9)
+#     midle = sum(args) / len(args)
+#     print(midle)
+#     res = []
+#     for element in args:
+#         if element < midle:
+#             res.append(element)
+#     return res
+#
+#
+# a = 1, 2, 3, 4, 5, 6, 7, 8, 9
+# # print(a)
+# first = func(*a)  # (1, 2, 3, 4, 5, 6, 7, 8, 9)
+# print(first)
+# second = func(3, 6, 1, 9, 5)
+# print(second)
+
+
+# def solution(*args):
+#     print(args)
+#     # type(args)
+#     avg = sum(*args) / len(*args)
+#     print(avg)
+#     # # print(type(avg))
+#     # # res = []
+#     # # for num in args:
+#     # #     if num < avg:
+#     # #         res.append(num)
+#     # # return res
+#
+#     print(*args)
+#     return [num for num in a]  #if num < avg
+#
+#
+# a = 1, 2, 3, 4, 5, 6, 7, 8, 9
+# first = solution(a)  # (1, 2, 3, 4, 5, 6, 7, 8, 9)
+# print(first)
+
+
+# def func(a, b, *args):
+#     return a, b, args
+#
+#
+# print(func(1, 8))
+# print(func(1, 2, 3, 4, 5, 6, 7))
+
+
+# def print_score(student, *scores):
+#     print("Student Name:", student)
+#     for score in scores:
+#         print(score)
+#
+#
+# print_score("Irina", 5, 4, 3, 2, 5)
+# print_score("Igor", 5, 4, 5, 3, 2, 5)
+# print_score("Lev")
+
+
+# def func(**kwargs):
+#     return kwargs
+#
+#
+# print(func(a=1, b=2, c=3))
+# print(func())
+# print(func(d=9))
+
+
+# def intro(**data):
+#     for k, v in data.items():
+#         print(k, '->', v)
+#     print()
+#
+#
+# intro(name="Irina", surname="Reznikova", age=22)
+# intro(name="Igor", surname="Berukov", email='igor@mail.ru', age=25, phone="+7909999-46-89")
+
+
+# def db(**kwargs):
+#     my_dict.update(kwargs)
+#     # print("внутри функции:", id(my_dict))
+#
+#
+# my_dict = {"one": "first"}
+# # print(id(my_dict))
+# db(k1=22, k2=31, k3=11, k4=91)
+# db(name='Bob', age=31, weight=61, eyes_color='grey')
+# # print(id(my_dict))
+# print(my_dict)
+
+
+# def func(a, b, c, *args, d, e, **kwargs):
+#     return kwargs, d, a, b, c, args, e
+#
+#
+# print(func(5, 9, 7, 8, 4, 3, 2, 1, k1=22, k2=31, e=100, d=55, k3=11, k4=91))
+
+
+# name = "Tom"
+
+# print("глобальная область видимости: ", id(name))
+
+
+# def hi():
+#     global name
+#     name = "Sam"
+#     # print("локальная область видимости: ", id(name))
+#     surname = "Johnson"
+#     print("Hello", name, surname)
+#
+#
+# def bye():
+#     print("Good bye", name)
+#
+#
+# print(name)
+# hi()
+# bye()
+# print(name)
+# print("глобальная область видимости внизу: ", id(name))
+
+# i = 5
+#
+#
+# def func(arg=i):
+#     print(arg)
+#
+#
+# i = 6
+# func()  # 5
+
+# x = 4
+#
+#
+# def add_five(a):
+#     # x = 2
+#
+#     def add_some():
+#         # x = 1
+#         print("x =", x)
+#         return a + x
+#
+#     return add_some()
+#
+#
+# print(add_five(5))
+
+
+# sum = 5
+#
+# lst = [9, 5, 8, 7, 6]
+# print(sum(lst))  # 5([9, 5, 8, 7, 6])
+
+# import builtins
+#
+# name = dir(builtins)
+#
+# for t in name:
+#     print(t)
+
+# def outer(who):
+#     def inner():
+#         print("Hello,", who)
+#
+#     inner()
+#
+#
+# outer("World!")
+
+
+# def fun1():
+#     a = 6  # 2
+#
+#     def fun2(b):  # b = 4
+#         a = 4  # 5
+#         print(a + b)  # 6  # 4 + 4 = 8
+#
+#     print("a:", a)  # 3  # a = 6
+#     fun2(4)  # 4
+#
+#
+# fun1()  # 1
+
+
+# x = 25
+# t = 0
+#
+#
+# def fn():
+#     global t
+#     a = 30  # 35
+#
+#     def inner():
+#         nonlocal a
+#         a = 35
+#         print("a:", a)
+#
+#     inner()
+#     t = a
+#
+#
+# fn()
+# c = x + t  # 25 + 30 = 55  # 25 + 35 = 60
+# print(c)
+# x = 5
+#
+#
+# def fn1():
+#     x = 25  # 2  # x = 55
+#
+#     def fn2():
+#         # x = 33  # 4
+#
+#         def fn3():
+#             nonlocal x
+#             x = 55  # 6
+#
+#         fn3()  # 5
+#         print('fn2.x =', x)  # 7  # x = 55
+#
+#     fn2()  # 3
+#     print("fn1.x =", x)  # 8  # x = 55
+#
+#
+# fn1()  # 1
+
+
+# def outer(a1, b1, a2, b2):
+#     a = 0  # 1
+#     b = 0  # 7
+#
+#     def inner():
+#         nonlocal a, b
+#         a = a1 + a2
+#         b = b1 + b2
+#         # print(a)
+#         # print(b)
+#
+#     inner()
+#     return [a, b]
+
+
+# res = outer(2, 3, -1, 4)
+# print(res)  # [1, 7]
+
+
+# Замыкание
+
+# def outer(n):
+#     def inner(x):
+#         return n + x
+#
+#     return inner
+#
+#
+# item1 = outer(5)
+# print(item1(10))
+#
+# item2 = outer(5)
+# print(item2(1))
+
+# print(outer(5)(20))
+
+
+# def func1():
+#     a = 1
+#     b = 'line'
+#     c = [1, 2, 3]
+#
+#     def func2():
+#         # nonlocal a, b
+#         # c.append(4)
+#         # a += 1
+#         # b += "_new"
+#         return a, b, c
+#
+#     return func2
+#
+#
+# func = func1()
+# print(func())
+
+# def func(city):
+#     s = 0  # 2  # 3
+#
+#     def inner():
+#         nonlocal s
+#         s += 1
+#         print(city, s)
+#
+#     return inner
+#
+#
+# res1 = func('Москва')
+# res1()
+# res1()
+# res2 = func('Сочи')
+# res2()
+# res2()
+# res2()
+#
+# res1()
+
+# lambda (анонимные функции)
+
+# print((lambda x, y: x + y)(1, 2))
+#
+# func = lambda x, y: x + y
+# print(func(1, 2))
+# print(func('a', 'b'))
+
+# print((lambda x, y: x ** 2 + y ** 2)(2, 5))
+# print((lambda x, y=5: x ** 2 + y ** 2)(2))
+# print((lambda x=2, y=5: x ** 2 + y ** 2)())
+# print((lambda x=2, y=5: x ** 2 + y ** 2)(y=10))
+
+# print((lambda *args: args)(1, 2, 3, 4, 5))
+
+
+# y = (
+#     lambda x: x * 2,
+#     lambda x: x * 3,
+#     lambda x: x * 4,
+# )
+#
+# for i in y:
+#     print(i("abc__"))
+
+
+# def outer(n):
+#     def inner(x):
+#         return x + n
+#
+#     return inner
+#
+#
+# f = outer(5)
+# print(f(10))
+#
+#
+# def outer1(n):
+#     return lambda x: x + n
+#
+#
+# f1 = outer1(5)
+# print(f1(10))
+#
+#
+# outer2 = lambda n: lambda x: x + n
+#
+# f2 = outer2(5)
+# print(f2(10))
+#
+#
+# print((lambda n: lambda x: x + n)(5)(10))
+
+# print((lambda n: lambda x: lambda y: x + n + y)(2)(4)(6))
+
+# def func(item):
+#     return item[1]
+#
+#
+# d = {'b': 3, 'c': 1, 'a': 2}  # {'c': 1, 'a': 2, 'b': 3}
+# print(d)
+# lst = list(d.items())  # [('b', 3), ('c', 1), ('a', 2)]
+# print(lst)
+# # lst.sort(key=lambda item: item[1])
+# lst.sort(key=func)
+# print(lst)
+# d1 = dict(lst)
+# print(d1)
+
+# players = [
+#     {'name': 'Антон', 'last name': 'Бирюков', 'rating': 9},
+#     {'name': 'Алексей', 'last name': 'Бодня', 'rating': 10},
+#     {'name': 'Федор', 'last name': 'Сидоров', 'rating': 4},
+#     {'name': 'Михаил', 'last name': 'Семенов', 'rating': 6},
+# ]
+#
+# res = sorted(players, key=lambda item: item['last name'])
+# print(res)
+#
+# res1 = sorted(players, key=lambda item: item['rating'])
+# print(res1)
+#
+# res2 = sorted(players, key=lambda item: item['rating'], reverse=True)
+# print(res2)
+
+
+# a = [
+#     lambda x, y: x + y,
+#     lambda x, y: x - y,
+#     lambda x, y: x * y,
+#     lambda x, y: x / y,
+# ]
+#
+# print(a[0](5, 2))
+# print(a[1](5, 2))
+# print(a[2](5, 2))
+
+# d = {
+#     1: lambda: print('Понедельник'),
+#     2: lambda: print('Вторник'),
+#     3: lambda: print('Среда'),
+#     4: lambda: print('Четверг'),
+#     5: lambda: print('Пятница'),
+#     6: lambda: print('Суббота'),
+#     7: lambda: print('Воскресенье')
+# }
+#
+# d[6]()
+
+# print((lambda a, b: a if a > b else b)(15, 23))
+
+
+# print((lambda a, b, c: a if (a < b and a < c) else (b if b < c else c))(28, 29, 25))
+
+
+# map(func, *iterables)
+
+# def mult(t):
+#     return t * 2
+
+
+# lst1 = [2, 8, 12, -5, -10]
+#
+# # lst2 = list(map(mult, lst1))
+# lst2 = list(map(lambda t: t * 2, lst1))
+# print(lst2)  # [4, 16, 24, -10, -20]
+
+# t = (2.88, -1.75, 100.55)
+# # t2 = tuple(map(lambda x: int(x), t))
+# t2 = tuple(map(int, t))
+# print(t2)
+
+# st = ['a', 'b', 'c', 'd', 'e']
+# num = [1, 2, 3, 4, 5]
+#
+# res = list(map(lambda x, y: (x, y), st, num))
+# print(res)
+
+
+# num = ['1', '2', '3', '4', '5']
+# print(list(map(int, num)))
+
+# l1 = [1, 2, 3]
+# l2 = [4, 5, 6]
+# res = list(map(lambda x, y: x + y, l1, l2))
+# print(res)
+
+
+# t = ('abcd', 'abc', 'asdfg', 'def', 'grt')
+# t2 = tuple(filter(lambda s: len(s) == 3, t))
+# print(t2)
+
+
+# b = [66, 90, 68, 59, 76, 60, 88, 74, 81, 65]
+# res = list(filter(lambda s: s > 75, b))
+# # res = list(map(lambda s: s + 5, b))
+# print(res)
+
+
+# m = list(map(lambda x: x ** 2, filter(lambda x: x % 2, range(10))))
+# # m = list(map(lambda x: x ** 2, [1, 3, 5, 7, 9]))
+# print(m)
+# n = [x ** 2 for x in range(10) if x % 2]
+# print(n)
+
+
+# import random
+#
+# my_list = [random.randint(1, 40) for i in range(20)]
+#
+# print(my_list)
+# # print(list(filter(lambda num: (num >= 10) and (num <= 20), my_list)))
+# print(list(filter(lambda num: 10 <= num <= 20, my_list)))
+
+
+# def hello():
+#     return 'Hello, I am func "hello"'
+#
+#
+# def super_func(func):
+#     print('Hello, I am func "super_func"')
+#     print(func())
+#
+#
+# super_func(hello)
+
+
+# def hello():
+#     return 'Hello, I am func "hello"'
+#
+#
+# test = hello
+# print(test())
+
+
+# def my_decorator(func):
+#     def wrap():
+#         print("Код до функции")
+#         func()
+#         print("Код после функции")
+#     return wrap
+#
+#
+# def func_test():
+#     print('Hello, I am func "func_test"')
+#
+#
+# test = my_decorator(func_test)
+# test()
+
+
+# def my_decorator(func):  # декорирующая функция
+#     def wrap():
+#         print("*" * 30)
+#         func()
+#         print("=" * 30)
+#     return wrap
+#
+#
+# @my_decorator  # декоратор
+# def func_test():  # декорируемая функция
+#     print('Hello, I am func "func_test"')
+#
+#
+# @my_decorator
+# def hello():
+#     print('Hello, I am func "hello"')
+#
+#
+# func_test()
+# hello()
+# test = my_decorator(func_test)
+# test()
+
+# def bold(fn):
+#     def wrap():
+#         return "<b>" + fn() + "</b>"
+#
+#     return wrap
+#
+#
+# def italic(fn):
+#     def wrap():
+#         return "<i>" + fn() + "</i>"
+#
+#     return wrap
+#
+#
+# @bold
+# @italic
+# def hello():
+#     return "text"
+#
+#
+# print(hello())
+
+# def cnt(fn):
+#     count = 0  # 1
+#
+#     def wrap(arg1, arg2):
+#         nonlocal count
+#         count = count + 1
+#         fn(arg1, arg2)
+#         print("Вызов функции: ", count, "\n", "*" * 20, sep="")
+#
+#     return wrap
+#
+#
+# @cnt
+# def hello(a, b):
+#     print("Hello,", a, "\nHello,", b)
+#
+#
+# hello("Python", "JavaScript")
+# hello("one", "two")
+# hello()
+
+# def args_decorator(fn):
+#     def wrap(*args, **kwargs):
+#         print("args", args)
+#         print("kwargs", kwargs)
+#         fn(*args, **kwargs)
+#     return wrap
+#
+#
+# @args_decorator
+# def print_data(a, b, c, study="Python"):
+#     print(a, b, c, "изучают", study, "\n")
+#
+#
+# print_data("Борис", "Елизавета", "Светлана", study="JavaScript")
+# print_data("Владимир", "Екатерина", "Виктор")
+# def decor(args1, args2):
+#     def args_dec(fn):
+#         def wrap(x, y):
+#             print(args1, x, args2, y, "=", end=" ")
+#             fn(x, y)
+#
+#         return wrap
+#     return args_dec
+#
+#
+# @decor("Сумма:", "+")
+# def summa(a, b):
+#     print(a + b)
+#
+#
+# @decor("Разность:", "-")
+# def sub(a, b):
+#     print(a - b)
+#
+#
+# summa(5, 2)
+# sub(5, 2)
+
+# def multiply(arg):
+#     """Параметры декоратора"""
+#     def test(fn):
+#         """Параметр - функция"""
+#         def wrap(x):
+#             """ Параметры функции"""
+#             return fn(x) * arg
+#         return wrap
+#     return test
+#
+#
+# @multiply(3)
+# def return_num(num):
+#     return num
+#
+#
+# print(return_num(5))
+
+# print(int('100', 2))  # 4
+# print(int('100', 8))  # 64
+# print(int('100', 10))  # 100
+# print(int('100', 16))  # 256
+#
+# print(bin(18))  # 0b10010
+# print(oct(18))  # 0o22
+# print(hex(18))  # 0x12
+#
+#
+# print(0b10010)
+# print(0o22)
+# print(0x12)
+# print(0b10010 + 0o22 + 0x12 + 18)
+
+
+# q = 'Pyt'
+# w = "hon"
+# e = q + w
+# print(e)  # Python => Pytton
+# # print(e * 3)
+# # print('y' in e)
+# # print('y1' in e)
+# # print(e[-6])
+# # print(e[:4])
+# # print(e[2:])
+# # print(e[::-1])
+# e = e[:3] + 't' + e[4:]
+# print(e)
+
+# def changeCharToStr(s, c_old, c_new):
+#     s2 = ""
+#     i = 0
+#
+#     while i < len(s):
+#         if s[i] == c_old:
+#             s2 += c_new
+#         else:
+#             s2 += s[i]
+#         i += 1
+#     return s2
+#
+#
+# str1 = "Я изучаю Nython. Мне нравится Nython. Nython очень интересный язык программирования."
+# str2 = changeCharToStr(str1, "N", "P")
+# print("str1 =", str1)
+# print("str2 =", str2)
+
+# print("Привет")
+# print(u"Привет")
+
+# print("C:\\folder\\file.txt\\")
+# print(r"C:\folder\file.txt\\"[:-1])
+# print(R"C:\folder\file.txt" + "\\")
+
+
+# name = "Дмитрий"
+# age = 25
+# print(f"Меня зовут {name}. Мне {age} лет.")
+# m = 2.58976415
+# print(f"Число: {round(m, 2)}")
+# print(f"Число: {m:.3f}")
+
+# x = 10
+# y = 5
+
+# print("x = ", x, ", y = ", y, sep="")
+# print(f"{x = }, {y = }")
+
+# print(f"{x} x {y} / 2 = {x * y / 2}")
+# num = 74
+# print(f"{num}")
+
+# dir_name = "my_doc"
+# file_name = "data.txt"
+# print(fr"home\{dir_name}\{file_name}")
+# print("home\\" + dir_name + "\\" + file_name)
+
+# s = """
+# Многостро'чный' "новый"
+# текст
+# """
+# print(s)
+#
+# s1 = '''
+# Многострочный
+#
+#         текст
+# '''
+# print(s1)
+#
+# s2 = "Тек\nст"
+# print(s2)
+
+# def square(n):
+#     """Принимает число n, возвращает квадрат числа n"""
+#     return n ** 2
+#
+#
+# print(square(5))
+# print(square.__doc__)
+# print(sum.__doc__)
+# print(min.__doc__)
+# print(len.__doc__)
+
+
+# from math import pi
+
+
+# def cylinder(r, h):
+#     """
+#     Вычисляет площадь цилиндра.
+#
+#     Вычисляет площадь цилиндра на основании заданной высоты и радиуса основания
+#
+#     :param r: положительное число, радиус основания цилиндра
+#     :param h: положительное число, высота цилиндра
+#     :return: положительное число, площадь цилиндра
+#     """
+#     print("Hello")
+#     return 2 * pi * r * (r + h)
+#
+#
+# print(cylinder(2, 4))
+# print(cylinder.__doc__)
+
+# print(ord("a"))  # 97
+# print(ord("й"))  # 1081
+
+# while True:
+#     n = input("-> ")
+#     if n != "-1":
+#         print(ord(n))
+#     else:
+#         break
+#
+# print(chr(1104))
+
+# s = "Test string for me"
+# arr = [ord(x) for x in s]
+# print("ASCII коды:", arr)
+# arr = [int(sum(arr) / len(arr))] + arr
+# print("Среднее арифметическое:", arr)
+# arr += [ord(x) for x in input("-> ")[:3] if ord(x) not in arr]
+# print(arr)
+# print(arr.count(arr[-1]) - 1)
+# arr.sort(reverse=True)
+# print(arr)
+
+# print(chr(97))
+# print(chr(1048))
+# print(chr(8364))
+
+# print("apple" == "Apple")  # 97 == 65
+# print("apple" > "Apple")  # 97 > 65
+#
+# print(ord("a"))
+# print(ord("A"))
+
+# from random import randint
+#
+# SHORTEST = 7
+# LONGEST = 10
+# MIN_ASCII = 33
+# MAX_ASCII = 126
+#
+#
+# def random_password():
+#     random_length = randint(SHORTEST, LONGEST)
+#     result = ""
+#     for i in range(random_length):
+#         result += chr(randint(MIN_ASCII, MAX_ASCII))
+#     return result
+#
+#
+# print("Ваш случайный пароль:", random_password())
+
+
+# s = "hello, WORLD! I am learning Python."
+# print(s.capitalize())  # Hello, world! i am learning python.
+# print(s.lower())  # hello, world! i am learning python.
+# print(s.upper())  # HELLO, WORLD! I AM LEARNING PYTHON.
+# print(s.swapcase())  # HELLO, world! i AM LEARNING pYTHON.
+# print(s.title())  # Hello, World! I Am Learning Python.
+# print(s)
+# print(s.count("h"))  # возвращает количество точных вхождение подстроки в строку
+# print(s.count("h", 1, -4))
+# print(s.find("Python", 10, -20))  # ищет в строке подстроку и возвращает ее индекс, если совпадение не найдено,
+# # то возвращает
+# # "-1"
+# print(s.find("l1"))
+# print(s.rfind("l1"))
+#
+# print(s.index("l"))  # ищет в строке подстроку и возвращает ее индекс, если совпадение не найдено, возвращает
+# # исключение ValueError
+# print(s.rindex("l"))
+
+
+# _s = input('Введите два слова через пробел: ')  # один два
+# first = _s[:_s.find(" ")]
+# second = _s[_s.find(" ") + 1:]
+# print(second + " " + first)
+
+# print(s.startswith("hello"))  # возвращает True, если строка начинается с указанной подстроки
+# print(s.find("I am"))
+# print(s.startswith("I am", 14))
+#
+# print(s.endswith("on."))  # возвращает True, если строка заканчивается указанной подстрокой
+# print(s.endswith("lo", 3, 5))
+
+# print("abc123".isalpha())
+# print("abcABC".isalpha())  # определяет состоит ли строка только из букв
+# print("".isalpha())
+# print('123'.isdigit())  # определяет состоит ли строка только из цифр
+# print('123.234'.isdigit())
+#
+# print("abc123".isalnum())   # определяет состоит ли строка только из букв и цифр
+# print("abcA123".isalnum())
+
+# print("abc".islower())  # определяет, являются ли буквенные символы строки строчными
+# print("!abc456A".islower())
+#
+# print("!456A".isupper())  # определяет, являются ли буквенные символы строки в верхнем регистре
+
+# print('py'.center(10, "-"))  # выравнивает строку по центру
+# print('py'.center(11, "-"))
+
+# удаляют пробельные символы слева или справа
+# print("     py".lstrip())
+# print("py     ".rstrip())
+# print("    py     ".strip())
+#
+# print("https://www.python.org".lstrip())
+# print("https://www.pythons.org".lstrip("/:pths").rstrip(".org"))
+# print("https://www.pythons.org".strip("/:pths.org"))
+
+
+# str1 = "Я изучаю Nython. Мне нравится Nython. Nython очень интересный язык программирования."
+# print(str1)
+# print(str1.replace("Nython", "Python", 2))
+
+# s1 = "-"
+# seq = ("a", "b", "c")
+# print(s1.join(seq))
+# print("..".join(['1', '2']))  # объединение итерируемой последовательности (состоит из строковых значений) в строку
+# print(":".join("Hello"))
+
+# print(s.split())
+# print('www.python.org.ru'.split(".", 2))  # делит строку на список, состоящий из подстрок
+# print('www.python.org.ru'.rsplit(".", 2))
+
+
+# a = input("-> ").split()
+# print(a)
+
+
+# a = input("Введите ФИО: ").split()
+# print(a)
+# print(a[0], a[1][0] + ".", a[2][0] + ".")
+#
+# d = [[1, 2, 3], [4, 5, 6]]
+# print(d[1][0])
+
+
+# a = input("Введите коды символов через пробел: ").split()
+# print(a)
+#
+# b = list(map(int, a))
+# print(b)
+
+
+# Регулярные выражения
+
+# import re
+#
+# s = "Я ищу совпадения в 2024 году. И я их найду в 2 счёта."
+# reg = r"\."
+# print(re.findall(reg, s))   # возвращает список, содержащий все совпадения с шаблоном
+#
+# print(re.search(reg, s))  # возвращает месторасположение первого совпадения с шаблоном
+# print(re.search(reg, s).span())  # (6, 16)
+#
+# print(re.search(reg, s).start())  # 6
+# print(re.search(reg, s).end())  # 16
+#
+# print(re.search(reg, s).group())  # совпадения
+
+# print(re.match(reg, s))  # возвращает месторасположение совпадения с шаблоном, но только вначале строки
+# print(re.split(reg, s))  # возвращает список, в котором строка разбита по шаблону
+#
+# print(re.sub(reg, "!", s, 1))  # поиск и замена
+
+
+import re
+
+
+# s = "Я ищу совпадения в 2024 году. И я их найду в 2 счёта. 198765 Hel_lo[-World] 2000010 002000"
+# reg = r"[204]"
+# reg = r"[0-4]"
+# reg = r"[12][0-9][0-9][0-9]"
+# reg = r"[А-яЁё]"
+# reg = r"^\w+\s\w+"
+# reg = r"\w+\s\w+$"
+# print(re.findall(reg, s))
+
+# print(ord('Ё'))
+# print(ord('А'))
+#
+# print(ord('Я'))
+# print(ord('а'))
+#
+# print(ord('я'))
+# print(ord('ё'))
+
+# st = "Час в 24-часовом формате от 00 до 23. 2021-06-15Е21:59. Минуты, в диапазоне от 00 до 59. 2021-06-15T01:09."
+# req = r"[0-2][0-9]:[0-5][0-9]"
+# print(re.findall(req, st))
+
+# d = "Цифры: 7, +17, --42, 0013, 0.3"
+# print(re.findall(r"[+-]?\d+[.\d]*", d))
+
+# st = "05-03-1987 # Дата рождения"
+# print("Дата рождения:", re.sub(r"#.*", "", st))  # Дата рождения: 05.03.1987
+
+
+# st = '05-03-1987 # Дата рождения'
+# print('Дата рождения:', re.sub(r'\s#.*', '', st))
+# # print('Дата рождения: ', re.sub(r'#.*', '', st).replace('-', '.'))
+# print('Дата рождения:', re.sub('-', '.', re.sub(r'#.*', '', st)))
+
+# st = "author=Пушкин А.С.; title  = Евгений Онегин; price =200; year= 1831"
+# req = r"\w+\s*=\s*[^;]+"
+# print(re.findall(req, st))
+
+
+# st = '05-03-1987 # Дата рождения'
+# print('Дата рождения:', re.sub(r'-', '.', re.search(r'\d{2}-\d{2}-\d{4}', st).group()))
+# print(re.search(r'\d{2}-\d{2}-\d{4}', st).group())
+
+
+# st = "12 сентября 2021 года 235541541564156"
+# req = r"\d{2,4}"
+# print(re.findall(req, st))
+
+# st = "+7 499 456-45-78, +74994564578, +7 (499) 456 45 78, 74994564578"
+# req = r'\+?7\d*'
+# print(re.findall(req, st))
+#
+# st = "+7 499 456-45-78, +74994564578, +7 (499) 456 45 78, 74994564578"
+# req = r'\+?7\d{10}'
+# print(re.findall(r"[+]?7\s?\d{3}\s?\d{3}-?\d{2}-?\d{2}", st))
+# print(re.findall(req, st))
+
+# def valid_login(name):
+#     return re.findall(r"^[A-Za-z0-9_-]{6,16}$", name)  # 6-16,  англ. буквы, _, -, [0-9]
+#
+#
+# print(valid_login("Python_master"))
+# print(valid_login("Python@Python"))
+
+# print(re.findall(r"\w+", "12 + й"))
+# print(re.findall(r"\w+", "12 + й", flags=re.ASCII))
+# print(re.findall(r"\w+", "12 + й", flags=re.A))
+# print(re.findall(r"\w+", "12 + й", re.A))
+
+# text = "hello world"
+# # print(re.findall(r"\w+", text))
+# print(re.findall(r"\w\+", text, re.DEBUG))
+
+# s = "Я ищу совпадения в 2024 году. И я их найду в 2 счёта."
+# reg = r'я'
+# print(re.findall(reg, s, re.IGNORECASE))
+
+# text = """
+# one
+# two
+# """
+# # print(re.findall(r'one.\w+', text))  # one\ntwo
+# # print(re.findall(r'one.\w+', text, re.DOTALL))  # one\ntwo
+# print(re.findall(r'one$', text))
+# print(re.findall(r'one$', text, re.MULTILINE))
+
+# print(re.findall(r"""
+# [a-z.-]+   # part 1
+# @          # @
+# [a-z.-]+   # part 2
+# """, 'test@mail.ru', re.VERBOSE))
+
+# text = """Python,
+# python,
+# PYTHON"""
+# reg = "(?mi)^python"
+# print(re.findall(reg, text))
+
+# text = "<body>Пример жадного соответствия регулярных выражений</body>"
+# print(re.findall("<.*?>", text))
+#
+# # *?, +?, ??
+# # {m,n}?, {,n}?, {m,}?
+#
+# st = "12 сентября 2021 года 235541541564156"
+# req = r"\d{2,}?"
+# print(re.findall(req, st))
+
+# s = "<p>Изображение <img width='300' src  = 'bg.jpg' alt='картинка'> - фон страницы <img src  = 'bg.jpg' " \
+#     "alt='картинка' width='300' ></p>"
+# # reg = r'<img.*?>'
+# reg = r"<img\s+[^>]*src\s*=\s*[^>]+>"
+# print(re.findall(reg, s))
+
+
+# text = "Python (в русском языке встречаются названия пито́н[16] или па́йтон[17]) — высокоуровневый язык " \
+#        "программирования общего назначения с динамической строгой типизацией " \
+#        "и автоматическим управлением памятью[18][19]."
+#
+# # print(re.findall(r'\[\d+]', text))
+# print(re.findall(r'\[.*?]', text))
+
+# s = "Петр, Ольга и Виталий отлично учатся!"
+# # reg = 'Петр|Виктор|Ольга'
+# # print(re.findall(reg, s))
+
+# s = "int = 4, float = 4.0f, double = 8.0, float, int"
+# # reg = r'\w+\s*=\s*\d[.\w]*'
+# # reg = r'int\s*=\s*\d[.\w]*|float\s*=\s*\d[.\w]*'
+# # reg = r'(?:int|float)\s*=\s*\d[.\w]*'  # ['int = 4', 'float = 4.0f']
+# # reg = r'((int|float)\s*=\s*(\d[.\w]*))'
+# reg = r'(int|float)\s*=\s*\d[.\w]*'
+# print(re.findall(reg, s))
+# print(re.search(reg, s).group())
+
+# (?:...) - эта группирующая скобка является не сохраняющей
+
+# s = '127.0.0.1'
+# # s = '127.168.255.255'
+# # reg = r'\d{1,3}.\d{1,3}.\d{1,3}.\d{1,3}'
+# reg = r'(\d{1,3}.){3}\d{1,3}'
+#
+# print(re.findall(reg, s))
+# print(re.search(reg, s).group())
+
+# s = "5 + 7*2 - 4"
+# reg = r'\s*([+*-])\s*'
+# print(re.split(reg, s))
+
+# a = '01-12-2021'
+# pattern = '(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(19[0-9][0-9]|20[0-9][0-9])'
+# print(re.findall(pattern, a))
+# print(re.search(pattern, a).group())
+
+# s = "Я ищу совпадения в 2024 году. И я их найду в 2 счёта."
+# reg = r'([0-9]+)\s(\D+)'  # ['2024 году. И я их найду в', '2024', 'году. И я их найду в']
+# print(re.findall(reg, s))
+# print(re.search(reg, s).group())
+# m = re.search(reg, s)
+# print(m[0])
+# print(m[1])
+# print(m[2])
+
+# text = """
+# Самара
+# Москва
+# Тверь
+# Уфа
+# Казань
+# """
+# count = 0
+#
+#
+# def repl_find(m):
+#     global count
+#     count += 1
+#     return f"<option value='{count}'>{m.group(1)}</option>\n"
+#
+#
+# print(re.sub(r'\s*(\w+)\s*', repl_find, text))
+
+
+# s = "<p>Изображение <img src=\"bg.jpg\"> - фон страницы </p>"
+# # reg = r"<img\s+[^>]*src\s*=(['\"])(.+?)\1>"
+# reg = r"<img\s+[^>]*src\s*=(?P<q>['\"])(.+?)(?P=q)>"
+# print(re.findall(reg, s))
+
+# (?P<name>...)  (?P=name)
+
+# s = "Самолет прилетает 10/23/2024. Будем рады вас видеть после 10/24/2024."  # 23.10.2024
+# reg = r'(\d{2})/(\d{2})/(\d{4})'
+# print(re.sub(reg, r'\2.\1.\3', s))
+
+# s = "yandex.com and yandex.ru"
+# reg = r'(([a-z0-9-]{2,}\.)+[a-z]{2,4})'
+# print(re.sub(reg, r"http://\2", s, re.IGNORECASE))
+
+# Рекурсия
+
+# def elevator(n):  # 0
+#     if n == 0:
+#         print("Вы в подвале")
+#         return
+#     print("=>", n)
+#     elevator(n - 1)  # 5 4 3 2 1
+#     print(n, end=" ")
+#
+#
+# n1 = int(input("На каком Вы этаже: "))  # 5
+# elevator(n1)
+
+
+# def sum_list(lst):
+#     res = 0
+#     for i in lst:
+#         res += i
+#     return res
+
+# def sum_list(lst):  # [9]
+#     if len(lst) == 1:
+#         print(lst, "=> lst[0]", lst[0])
+#         return lst[0]  # 9
+#     else:
+#         print(lst, "=> lst[0]", lst[0])
+#         return lst[0] + sum_list(lst[1:])  # 1 + 3 + 5 + 7 +
+#
+#
+# print(sum_list([1, 3, 5, 7, 9]))  # 25
+
+
+# def to_str(n, base):  # n = 15
+#     convert = "0123456789ABCDEF"
+#     if n < base:  # 15 < 16
+#         return convert[n]  # convert[15] => 'F'
+#     else:
+#         return to_str(n // base, base) + convert[n % base]  # convert[14] => 'E'
+#
+#
+# print(to_str(254, 16))
+# print(to_str(18, 2))
+# print(to_str(18, 8))
+# print(to_str(18, 16))
+
+
+# names = ['Adam', ['Bob', ['Chet', 'Cat'], 'Bard', 'Bert'], 'Alex', ['Bea', 'Bill'], 'Ann']
+# print(names)
+#
+#
+# # print(names[0])
+# # print(isinstance(names[0], list))
+# # print(names[1])
+# # print(isinstance(names[1], list))
+# # print(names[1][1])
+# # print(isinstance(names[1][1], list))
+# # print(names[1][1][0])
+# # print(isinstance(names[1][1][0], list))
+# def count_item(lst):
+#     count = 0
+#     for item in lst:
+#         if isinstance(item, list):
+#             count += count_item(item)
+#         else:
+#             count += 1
+#     return count
+#
+#
+# print(count_item(names))
+
+# def remove(text):  # ""
+#     if not text:
+#         return ""
+#     if text[0] == "\t" or text[0] == " ":  # False or True => True
+#         return remove(text[1:])
+#     else:
+#         return text[0] + remove(text[1:])  # 'HelloWorld'
+#
+#
+# print(remove(" Hello\tWorld "))
+
+# Файлы
+
+# Текстовые
+# Бинарные
+
+# f = open(r'D:\Python313\313\test.txt', 'r')  # , mode='r'
+# f = open('test.txt', 'r')
+# print(*f)
+# print(f)
+# f.close()
+# print(f.closed)
+# print(f.mode)
+# print(f.name)
+# print(f.encoding)
+
+
+# f = open('test.txt', 'r')
+# print(f.read(3))
+# print(f.read())  # считываем файл полностью
+# f.close()
+
+
+# f = open('test1.txt', 'r')
+# print(f.readline())  # считали одну строку из файла
+# print(f.readline(8))
+# print(f.readline())
+# print(f.readline())
+# f.close()
+
+
+# f = open('test1.txt', 'r')
+# # print(f.readlines(16))  # считали все данные из файла и вернули список строк
+# print(f.readlines())
+# f.close()
+
+
+# f = open('test1.txt', 'r')
+# count = 0
+# for line in f:
+#     print(line)
+#     count += 1
+# f.close()
+# print("count =", count)
+
+
+# f = open('test1.txt', 'r')
+# print(len(f.readlines()))
+# f.close()
+
+# f = open("xyz.txt", "w")
+# f.write("Hello\nWorld!\n")
+# f.close()
+
+# f = open("xyz.txt", "a")
+# f.write("New text.\n")
+# f.close()
+
+# f = open("xyz.txt", "w")
+# line = ['This is line 1\n', 'This is line 2\n']
+# f.writelines(line)
+# f.close()
+
+# def negative_numbers(a):  # []
+#     if not a:
+#         return 0
+#     else:
+#         count = negative_numbers(a[1:])  #
+#         if a[0] < 0:
+#             count += 1  # 3
+#         return count
+#
+#
+# lst = [-2, 3, 8, -11, -4, 6, -7, -3]
+# print(negative_numbers(lst))
+
+
+# def negative_number(n):
+#     if not n:
+#         return 0
+#     count = 0
+#     if n[0] < 0:
+#         count += 1
+#     return count + negative_number(n[1:])
+#
+#
+# lst = [-2, 3, 8, -11, -4, 6]
+# print(negative_number(lst))
+
+# f = open('xyz.txt', 'w')
+# lst = [str(i) for i in range(1, 20)]
+# print(lst)
+# for index in lst:
+#     f.write(index + "\t")
+# f.close()
+
+# f = open("text2.txt", "w")
+# f.write("Замена строки в текстовом файле;\nизменить строку в списке;\nзаписать список в файл;\n")
+# f.close()
+
+# f = open("text2.txt", "r")
+# rl = f.readlines()  # ['Замена строки в текстовом файле;\n', 'изменить строку в списке;\n', 'записать список в файл;\n']
+# f.close()
+#
+# print(rl)
+# rl[1] = "Hello World\n"
+# print(rl)  # ['Замена строки в текстовом файле;\n', 'Hello World\n', 'записать список в файл;\n']
+#
+# f = open("text2.txt", "w")
+# f.writelines(rl)
+# f.close()
+
+
+# filename = "text2.txt"
+# f = open(filename, "r")
+# rl = f.readlines()
+# f.close()
+#
+# print(rl)
+#
+# pos = int(input("Введите индекс строки для удаления: "))
+# if 0 <= pos < len(rl):
+#     rl.pop(pos)
+# else:
+#     print("Индекс введен неверно")
+#
+# print(rl)
+#
+# f = open(filename, "w")
+# f.writelines(rl)
+# f.close()
+
+# source = 'text2.txt'
+#
+#
+# def input_index():
+#     file = open(source, 'r')
+#     read_text = file.readlines()
+#     file.close()
+#     index = int(input('Введите номер строки: '))
+#     if index not in range(len(read_text)) or index < 1:
+#         print('Убедитесь что введен корректный номер строки и повторите попытку')
+#         input_index()
+#     else:
+#         return read_text, index - 1
+#
+#
+# t, i = input_index()
+#
+# f = open(source, 'w')
+# del t[i]
+# f.writelines(t)
+# f.close()
+
+
+# with open("filename.txt", "w") as f:
+#     f.write("Замена строки в текстовом файле;\nИзменить строку в списке;\nЗаписать список в файл\n")
+#
+# with open("filename.txt", "r") as f1:
+#     lines = f1.readlines()
+# while True:
+#     index_to_remove = int(input("Введите индекс строки для удаления: "))
+#     if 0 <= index_to_remove < len(lines):
+#         lines.pop(index_to_remove)
+#         break
+#
+# with open("filename.txt", "w") as f:
+#     f.writelines(lines)
+
+# def input_index():
+#     file = open('text2.txt', 'r')
+#     read_text = file.readlines()
+#     file.close()
+#     index = int(input('Введите номер строки: '))
+#     if index not in range(1, len(read_text) + 1) or index < 1:
+#         print('Убедитесь что введен корректный номер строки и повторите попытку.')
+#         return input_index()
+#     else:
+#         return read_text, index - 1
+#
+#
+# t, i = input_index()
+#
+# f = open('text2.txt', 'w')
+# del t[i]
+# f.writelines(t)
+# f.close()
+
+# f = open("test.txt", "r")
+# print(f.read(3))
+# print(f.tell())  # возвращает текущую позицию уловного курсора в файле
+# print(f.seek(1))  # переместил условный курсор в заданную позицию
+# print(f.read())
+# print(f.tell())
+# f.close()
+
+# f = open("test.txt", "a+")
+# print(f.write("I am learning Python"))
+# print(f.tell())
+# print(f.seek(3))
+# print(f.write("-new string-"))
+# print(f.tell())
+# f.close()
+
+# with open("test.txt", "w+") as f:
+#     print(f.write('01234\n56789'))
+#
+# with open("test.txt", "r") as f:
+#     for line in f:
+#         print(line[:3])
+
+# file_name = "res_1.txt"
+# lst = [4.5, 2.8, 3.9, 1.0, 0.3, 4.33, 7.777]
+#
+#
+# def get_line(lt):
+#     lt = list(map(str, lt))
+#     print(lt)
+#     return " ".join(lt)
+#
+#
+# with open(file_name, 'w') as f:
+#     f.write(get_line(lst))  # '[4.5, 2.8, 3.9, 1.0, 0.3, 4.33, 7.777]'
+#
+# with open(file_name, "r") as f:
+#     nums = f.read()
+#
+# print(nums)  # "4.5 2.8 3.9 1.0 0.3 4.33 7.777"
+#
+# nums_list = list(map(float, nums.split()))
+# print(nums_list)
+# print(sum(nums_list))
+# print(len(nums_list))
+# print("Done!")
+
+# def longest_worlds(file):
+#     with open(file, 'r') as text:  # , encoding="utf-8"
+#         w = text.read().split()
+#         max_length = len(max(w, key=len))  # длина самого длинного слова
+#         print(max_length)
+#         res = [word for word in w if len(word) == max_length]
+#         if len(res) == 1:
+#             return res[0]
+#         return res
+#
+#
+# print(longest_worlds('words.txt'))
+
+# one = 'one.txt'
+# two = 'two.txt'
+# # text = "Строка №1\nСтрока №2\nСтрока №3\nСтрока №4\nСтрока №5\nСтрока №6\nСтрока №7\nСтрока №8\nСтрока №9\nСтрока №10\n"
+# #
+# # with open(one, "w") as f:
+# #     f.write(text)
+#
+# with open(one, 'r') as fr, open(two, 'w') as fw:
+#     for line in fr:
+#         line = line.replace("Строка", "Линия -")
+#         fw.write(line)
+
+# Модуль OS и OS.PATH
+
+# import os
+# import os.path
+
+
+# print(os.getcwd())  # путь к текущей директории
+#
+# print(os.listdir())  # список директорий и файлов
+#
+# print(os.listdir(".."))
+
+# os.mkdir("folder1")  # создание папки
+
+# os.makedirs("nested1/nested2/nested3")  # создание папки с промежуточными директориями
+
+# os.rmdir("folder1")  # удаление папки
+
+# os.remove("xyz.txt")  # удаление файла
+
+# os.remove("folder/test.txt")
+# os.rmdir("folder")
+
+# os.rename("nested1", "test")  # переименовали папку
+
+# os.rename("words.txt", "test/words_new.txt")  # переименовали файл и переместили в заданную директорию
+
+# os.renames("two.txt", "folder/file.txt")  # переименовали файл и переместили в заданную директорию, при этом может
+# создать промежуточные директории
+
+# for root, dirs, files in os.walk('test', topdown=False):
+#     print("Root:", root)
+#     print("Subdirs:", dirs)
+#     print("Files:", files)
+
+# os.mkdir('Test_folder')
+# for i in range(1, 4):
+#     with open(f'file{i}.txt', 'w') as file:
+#         ...
+# os.mkdir('Test_folder/Inner_test_folder1')
+# for i in range(4, 9):
+#     with open(f'Test_folder/Inner_test_folder1/file{i}.txt', 'w') as file:
+#         ...
+# os.mkdir('Test_folder/Inner_test_folder2')
+# for i in range(9, 15):
+#     with open(f'Test_folder/Inner_test_folder2/file{i}.txt', 'w') as file:
+#         ...
+
+# for root, dirs, files in os.walk('Test_folder', topdown=False):
+#     print("Root:", root)
+#     print("Subdirs:", dirs)
+#     print("Files:", files)
+
+# def remove_empty_dirs(root_tree):
+#     print(f"Удаление пустых директорий в ветви {root_tree}")
+#     print("-" * 50)
+#
+#     for root, dirs, files in os.walk(root_tree):
+#         if not os.listdir(root):
+#             os.rmdir(root)
+#             print(f"Директория {root} удалена")
+#
+#     print("-" * 50)
+#
+#
+# remove_empty_dirs("test")
+#
+#
+# print(os.listdir("test/folder1"))
+
+
+# def remove_empty_dirs(root_tree):
+#     print(f"Удаление пустых директорий в ветви {root_tree}")
+#     print("-" * 50)
+#
+#     for root, dirs, files in os.walk(root_tree, topdown=False):
+#         os.rmdir(root)
+#         print(f"Директория {root} удалена")
+#
+#     print("-" * 50)
+#
+#
+# remove_empty_dirs("test")
+
+# print(os.path.split(r"D:\Python313\313\test\nested2\nested3\words_new.txt"))
+# print(os.path.dirname(r"D:\Python313\313\test\nested2\nested3\words_new.txt"))
+# print(os.path.basename(r"D:\Python313\313\test\nested2\nested3\words_new.txt"))
+#
+# print(os.path.join('313', r'D:\Python313', 'test', 'words_new.txt'))
+
+# dirs = [r'Work\F1', r'Work\F2\F21']
+# for d in dirs:
+#     os.makedirs(d)
+
+# files = {
+#     'Work': ['w.txt'],
+#     r'Work\F1': ['f11.txt', 'f12.txt', 'f13.txt'],
+#     r'Work\F2\F21': ['f211.txt', 'f212.txt']
+# }
+#
+# for d, f in files.items():
+#     for file in f:
+#         file_path = os.path.join(d, file)
+#         open(file_path, "w").close()
+
+# files_with_text = [r'Work\w.txt', r'Work\F1\f12.txt', r'Work\F2\F21\f211.txt', r'Work\F2\F21\f212.txt']
+# for file in files_with_text:
+#     with open(file, "w") as f:
+#         f.write(f"Какой-то текст для файла расположенного по пути: {file}")
+
+
+# Work\w.txt
+# Work\F1\f11.txt
+# Work\F1\f12.txt
+# Work\F1\f13.txt
+# Work\F2\F21\f211.txt
+# Work\F2\F21\f212.txt
+
+# def print_tree(root, topdown):
+#     print(f"Обход {root} {'сверху вниз' if topdown else 'снизу вверх'}")
+#     for root, dirs, files in os.walk(root, topdown):
+#         print(root)
+#         print(dirs)
+#         print(files)
+#     print("-" * 50)
+#
+#
+# print_tree("Work", False)
+# print_tree("Work", True)
+
+# print(os.path.exists(r"D:\Python313\313\test\nested2\nested3\words_new.txt"))  # проверяет существование пути
+
+# print(os.path.isfile(r"D:\Python313\313\test\nested2\nested3\words_new.txt"))  # проверяет, что указанный путь
+# # является правильным путем к файлу
+#
+# print(os.path.isdir(r"D:\Python313\313\test\nested2\nested3"))  # проверяет, что указанный путь
+# является правильным путем к папке
+
+# import time
+
+# path = 'main.py'
+# # print(os.path.getsize(path))  # возвращает размер файла в байтах (FileNotFoundError)
+# # print(os.path.getsize(path) // 1024)  # размер в килобайтах
+#
+# print(time.strftime("%d.%m.%Y, %H:%M:%S", time.localtime(os.path.getatime(path))))  # возвращает время последнего
+# # доступа к файлу (в секундах)
+# print(time.strftime("%d.%m.%Y, %H:%M:%S", time.localtime(os.path.getctime(path))))  # возвращает время создание файла
+# print(time.strftime("%d.%m.%Y, %H:%M:%S", time.localtime(os.path.getmtime(path))))  # возвращает время последнего
+# изменения файла
+
+
+# file_path = r"test\nested2\nested3\text21.txt"
+#
+# if os.path.exists(file_path):
+#     dirs, name = os.path.split(file_path)
+#     print(f"{name} ({dirs}) - последний доступ к файлу: {os.path.getatime(file_path)}")
+# else:
+#     print(f"Файл {file_path} не существует")
+# try:
+#     dirs, name = os.path.split(file_path)
+#     print(f"{name} ({dirs}) - ") # последний доступ к файлу: {os.path.getatime(file_path)}")
+# except FileNotFoundError:
+#     print(f"Файл {file_path} не существует")
+
+# print(os.path.getatime(file_path))
+
+# import os
+#
+# dir_name = 'test'
+# objs = os.listdir(dir_name)
+# print(objs)
+#
+# for obj in objs:
+#     p = os.path.join(dir_name, obj)
+#     # print(p)
+#     if os.path.isfile(p):
+#         print(f"{obj} - file - {os.path.getsize(p)} bytes")
+#     elif os.path.isdir(p):
+#         print(f"{obj} - dir")
+
+# OOP
+
+# class Point:
+#     x = 1
+#     y = 1
+#
+#
+# p1 = Point()
+# p1.x = 5
+# p1.y = 24
+# print(p1.x)
+# print(p1.y)
+# print(p1.__dict__)
+# print(id(p1))
+#
+# p2 = Point()
+# p2.x = 10
+# print(p2.x)
+# print(p2.y)
+# print(p2.__dict__)
+# print(id(p2))
+#
+# print(id(Point))
+#
+# print(isinstance(p1, Point))
+# print(isinstance(p2, Point))
+
+# class Point:
+#     x = 1
+#     y = 1
+#
+#     def set_coord(self, x, y):  # def set_coord(p2):
+#         self.x = x  # p2.x = 10
+#         self.y = y  # p2.y = 30
+#         print(self.__dict__)  # print(p2.__dict__)
+#
+#
+# p1 = Point()
+# # p1.x = 5
+# # p1.y = 24
+# p1.set_coord(5, 24)
+# Point.set_coord(p1, 5, 24)
+#
+# p2 = Point()
+# # p2.x = 10
+# # p2.y = 30
+# p2.set_coord(10, 30)
+
+
+# class Human:
+#     name = "name"
+#     birthday = "00.00.0000"
+#     phone = "00-00-00"
+#     country = "country"
+#     city = "city"
+#     address = "street, house"
+#
+#     def print_info(self):
+#         print(" Персональные данные ".center(40, "*"))
+#         print(f"Имя: {self.name}\nДата рождения: {self.birthday}\nНомер телефона: {self.phone}\n"
+#               f"Страна: {self.country}\nГород: {self.city}\nДомашний адрес: {self.address}")
+#         print("=" * 40)
+#
+#     def input_info(self, first_name, birthday, phone, country, city, address):
+#         self.city = city
+#         self.name = first_name
+#         self.birthday = birthday
+#         self.phone = phone
+#         self.country = country
+#         self.address = address
+#
+#     def set_address(self, address):  # устанавливаем адрес
+#         self.address = address
+#
+#     def get_address(self):  # получаем адрес
+#         return self.address
+#
+#     def set_name(self, name):  # устанавливаем имя
+#         self.name = name
+#
+#     def get_name(self):  # получаем имя
+#         return self.name
+#
+#
+# h1 = Human()
+# h1.print_info()
+# h1.input_info("Юля", "23.05.1986", "45-46-98", "Россия", "Москва", "Чистопрудный бульвар, 1А")
+# h1.print_info()
+# h1.set_address("ул. Ленина, 56")
+# print(h1.get_address())
+# h1.set_name("Юлия")
+# print(h1.get_name())
+
+
+# class Person:
+#     skill = 10  # статическое свойство
+#     count = 0  # 2
+#
+#     def __init__(self, name, surname):
+#         self.name = name  # динамическое свойства
+#         self.surname = surname
+#         # print("Инициализатор класса", self)
+#         Person.count += 1
+#
+#     # def __del__(self):
+#     #     print("Удаление экземпляра", self)
+#     #
+#     # def print_info(self):
+#     #     print("Данные сотрудника:", self.name, self.surname)
+#     #
+#     # def add_skill(self, k):
+#     #     self.skill += k
+#     #     print("Квалификация сотрудника:", self.skill, end="\n\n")
+#
+#
+# p1 = Person("Виктор", "Резник")
+# # p1.print_info()
+# # p1.add_skill(3)
+# # del p1
+# # p1 = 5
+#
+#
+# p2 = Person("Анна", "Долгих")
+# # p2.print_info()
+# # p2.add_skill(2)
+#
+# p3 = Person("Анна", "Долгих")
+# print(p2.count)
+#
+# print(Person.count)
+# print(p1.count)
+
+
+# class Robot:
+#     k = 0
+#
+#     def __init__(self, name):
+#         self.name = name
+#
+#     def __del__(self):
+#         print(self.name, "выключается!")
+#
+#         Robot.k -= 1
+#
+#         if Robot.k == 0:
+#             print(self.name, "был последним")
+#         else:
+#             print("Работающих роботов осталось:", Robot.k)
+#         print("Инициализация робота:", self.name)
+#         Robot.k += 1
+#
+#     def say_hi(self):
+#         print("Приветствую! Меня зовут:", self.name)
+#
+#
+# droid1 = Robot('R2-D2')
+# droid1.say_hi()
+# print("Численность роботов:", Robot.k)
+#
+# droid2 = Robot('C-3PO')
+# droid2.say_hi()
+# print("Численность роботов:", Robot.k)
+#
+# droid3 = Robot('HP-2PO')
+# droid3.say_hi()
+# print("Численность роботов:", Robot.k)
+#
+# print("\nЗдесь роботы могут проделать какую-то работу\n")
+#
+# print("Роботы закончили свою работу. Давайте их выключим.")
+# del droid1
+# del droid2
+# del droid3
+#
+# print("Численность роботов:", Robot.k)
+
+# class Point:
+#     __slots__ = ("__x", "__y", "z")
+#
+#     def __init__(self, x, y):
+#         self.__x = self.__y = 0
+#         if Point.__check_value(x) and Point.__check_value(y):
+#             self.__x = x
+#             self.__y = y
+#         # self.x = x
+#         # self.y = y
+#
+#     def __check_value(c):
+#         if isinstance(c, int) or isinstance(c, float):
+#             return True
+#         return False
+#
+#     def get_coord(self):  # получить
+#         return self.__x, self.__y
+#
+#     def set_coord(self, x, y):  # установить
+#         if Point.__check_value(x) and Point.__check_value(y):
+#             self.__x = x
+#             self.__y = y
+#         else:
+#             print("Координаты должны быть числами")
+#
+#     def get_x(self):
+#         return self.__x
+#
+#     def get_y(self):
+#         return self.__y
+#
+#     def set_x(self, x):
+#         if Point.__check_value(x):
+#             self.__x = x
+#         else:
+#             print("Координата", x, "должна быть числом")
+#
+#     def set_y(self, y):
+#         if Point.__check_value(y):
+#             self.__y = y
+#         else:
+#             print("Координата", y, "должна быть числом")
+#
+#
+# p1 = Point(5, 10)
+# p1.z = 1
+# print(p1.z)
+# p1.set_x(20.6)
+# p1.set_y(30.4)
+# print(Point.__check_value(8))
+# print(p1.get_coord())
+# p1.set_coord(100, 200)
+# print(p1.get_coord())
+# p1.__x = 100
+# p1.y = "abc"
+# print(p1.x, p1.y)
+# print(p1.get_x())
+# print(p1.get_y())
+# print(p1.__dict__)
+# print(Point.__dict__)
+# print(p1._Point__x)
+# p1._Point__x = "asd"
+# print(p1.__dict__)
+
+#
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __get_x(self):
+#         return self.__x
+#
+#     def __get_y(self):
+#         return self.__y
+#
+#     def __set_x(self, x):
+#         self.__x = x
+#
+#     def __set_y(self, y):
+#         self.__y = y
+#
+#     def __del_x(self):
+#         print("Удаление свойства")
+#         del self.__x
+#
+#     x = property(__get_x, __set_x, __del_x)
+#
+#
+# p1 = Point(5, 10)
+# # print(p1.get_x())
+# # print(Point.__dict__)
+# p1.x = 100
+# print(p1.x)
+# del p1.x
+# print(p1.__dict__)
+
+
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__y = y
+#
+#     @property
+#     def x(self):
+#         return self.__x
+#
+#     @x.setter
+#     def x(self, x):
+#         if not isinstance(x, (int, float)):
+#             raise TypeError("Устанавливаемое значение должно быть числом")
+#             # print("Устанавливаемое значение должно быть числом")
+#         self.__x = x
+#
+#     @x.deleter
+#     def x(self):
+#         print("Удаление свойства")
+#         del self.__x
+#
+#     def __get_y(self):
+#         return self.__y
+#
+#     def __set_y(self, y):
+#         self.__y = y
+#
+#     # x = property(__get_x, __set_x)
+#
+#
+# p1 = Point(5, 10)
+# # print(p1.get_x())
+# # print(Point.__dict__)
+# p1.x = 100
+# print(p1.x)
+# # del p1.x
+# print(p1.__dict__)
+
+
+# class KgToPounds:
+#
+#     def __init__(self, kg):
+#         self.__kg = kg
+#
+#     @property
+#     def kg(self):
+#         return self.__kg
+#
+#     @kg.setter
+#     def kg(self, new_kg):
+#         if isinstance(new_kg, (int, float)):
+#             self.__kg = new_kg
+#         else:
+#             print("Килограммы задаются только числами")
+#
+#     def to_pounds(self):
+#         return self.__kg * 2.205
+#
+#     def print_data(self):
+#         print(self.kg, "кг => ", end="")
+#         print(self.to_pounds(), "фунтов")
+#
+#
+# weight = KgToPounds(12)
+# weight.print_data()
+# weight.kg = 41
+# weight.print_data()
+# weight.kg = "десять"
+# weight.print_data()
+
+
+# class Point:
+#     __count = 0
+#
+#     def __init__(self, x=0, y=0):
+#         self.x = x
+#         self.y = y
+#         Point.__count += 1
+#
+#     @staticmethod
+#     def get_count():
+#         return Point.__count
+#
+#     # get_count = staticmethod(get_count)
+#
+#
+# p1 = Point()
+# p2 = Point()
+# p3 = Point()
+#
+# print(Point.get_count())
+# print(p2.get_count())
+
+
+# class Change:
+#     @staticmethod
+#     def inc(x):
+#         return x + 1
+#
+#     @staticmethod
+#     def dec(x):
+#         return x - 1
+#
+#
+# print(Change.inc(10), Change.dec(10))
+
+# class Tools:
+#     @staticmethod
+#     def maximum(*my_list):
+#         return max(my_list)
+#
+#     @staticmethod
+#     def minimum(my_list):
+#         return min(my_list)
+#
+#     @staticmethod
+#     def middle(my_list):
+#         return sum(my_list) / len(my_list)  # среднее арифметическое
+#
+#     # @staticmethod
+#     # def factorial(number):
+#     #     if number == 1:
+#     #         return 1
+#     #     else:
+#     #         return Tools.factorial(number - 1) * number
+#
+#     @staticmethod
+#     def factorial(number):
+#         fact = 1
+#         for i in range(1, number + 1):
+#             fact *= i
+#         return fact
+#
+#
+# print(f'Максимальное число: {Tools.maximum(3, 5, 7, 9)}')
+# print(f'Минимум число: {Tools.minimum([3, 5, 7, 9])}')
+# print(f'Среднее арифметическое: {Tools.middle([3, 5, 7, 9])}')
+# print(f'Факториал числа {5}: {Tools.factorial(5)}')
+
+# from math import sqrt
+#
+#
+# class Square:
+#     __count = 0
+#
+#     @staticmethod
+#     def square_triangle1(a, b, c):
+#         Square.__count += 1
+#         p = (a + b + c) / 2
+#         return sqrt(p * (p - a) * (p - b) * (p - c))
+#
+#     @staticmethod
+#     def square_triangle2(a, b):
+#         Square.__count += 1
+#         return 0.5 * a * b
+#
+#     @staticmethod
+#     def square_area(a):
+#         Square.__count += 1
+#         return a * a
+#
+#     @staticmethod
+#     def square_rectangle(a, b):
+#         Square.__count += 1
+#         return a * b
+#
+#     @staticmethod
+#     def get_count():
+#         return Square.__count
+#
+#     def print_info(self):
+#         print(self, "Hello")
+#
+#
+# area = Square()
+# area.print_info()
+# area1 = Square()
+# Square.print_info(area1)
+# print('Площадь треугольника по формуле Герона:', area1.square_triangle1(3, 4, 5))
+# print('Площадь треугольника через основание и высоту:', Square.square_triangle2(6, 7))
+# print('Площадь квадрата:', Square.square_area(7))
+# print('Площадь прямоугольника:', Square.square_rectangle(2, 6))
+# print('Количество подсчетов площади:', Square.get_count())
+
+# class Date:
+#     def __init__(self, day, month, year):
+#         self.day = day  # 23
+#         self.month = month  # 10
+#         self.year = year  # 2024
+#
+#     @classmethod
+#     def from_string(cls, date_as_string):
+#         day, month, year = map(int, date_as_string.split("."))  # 23 10 2024
+#         date1 = cls(day, month, year)   # date1 = Date(23, 10, 2024)
+#         return date1  # Date(23, 10, 2024)
+#
+#     @staticmethod
+#     def is_date_valid(date_as_string):
+#         if date_as_string.count(".") == 2:
+#             day, month, year = map(int, date_as_string.split("."))
+#             return day <= 31 and month <= 12 and year <= 3999
+#
+#     def string_to_db(self):
+#         return f"{self.year}-{self.month}-{self.day}"
+#
+#
+# dates = [
+#     '30.12.2023',
+#     '30-12-2020',
+#     '01.01.2024',
+#     '12.31.2020'
+# ]
+#
+# for string_date in dates:
+#     if Date.is_date_valid(string_date):
+#         date = Date.from_string(string_date)
+#         print(date.string_to_db())
+#     else:
+#         print("Неправильная дата или формат строки с датой")
+
+
+# date2 = Date.from_string("23.10.2024")  # date2 = Date(23, 10, 2024)
+# print(date2.string_to_db())
+# date3 = Date.from_string("25.12.2023")
+# print(date3.string_to_db())
+
+# string_date = "23.10.2024"
+# day, month, year = map(int, string_date.split("."))
+# day, month, year = 23, 10, 2024
+# print(day, month, year)  # 23 10 2024
+# date = Date(day, month, year)
+# print(date.string_to_db())
+
+
+# class Account:
+#     rate_usd = 0.013
+#     rate_eur = 0.011
+#     suffix = 'RUB'
+#     suffix_usd = 'USD'
+#     suffix_eur = 'EUR'
+#
+#     def __init__(self, surname, num, percent, value=0):
+#         self.surname = surname
+#         self.num = num
+#         self.percent = percent
+#         self.value = value
+#         print(f"Счет #{self.num} принадлежащий {self.surname} был открыт.")
+#         print("*" * 50)
+#
+#     def __del__(self):
+#         print("*" * 50)
+#         print(f"Счет #{self.num} принадлежащий {self.surname} был закрыт.")
+#
+#     @classmethod
+#     def set_usd_rate(cls, rate):
+#         cls.rate_usd = rate
+#
+#     @classmethod
+#     def set_eur_rate(cls, rate):
+#         cls.rate_eur = rate
+#
+#     @staticmethod
+#     def convert(value, rate):
+#         return value * rate
+#
+#     def add_money(self, val):
+#         self.value += val
+#         print(f"{val} {Account.suffix} было успешно добавлено!")
+#         self.print_balance()
+#
+#     def convert_to_usd(self):
+#         usd_val = Account.convert(self.value, Account.rate_usd)
+#         print(f"Состояние счета: {usd_val} {Account.suffix_usd}")
+#
+#     def convert_to_eur(self):
+#         uer_val = Account.convert(self.value, Account.rate_eur)
+#         print(f"Состояние счёта: {uer_val} {Account.suffix_eur}")
+#
+#     def edit_owner(self, surname):
+#         self.surname = surname
+#
+#     def add_percent(self):
+#         self.value += self.value * self.percent
+#         print("Проценты были успешно начислены")
+#         self.print_balance()
+#
+#     def withdraw_money(self, val):
+#         if val > self.value:
+#             print(f"К сожалению у вас нет {val} {Account.suffix}")
+#         else:
+#             self.value -= val
+#             print(f"{val} {Account.suffix} было успешно снять!")
+#         self.print_balance()
+#
+#     def print_balance(self):
+#         print(f"Текущий баланс {self.value} {Account.suffix}")
+#
+#     def print_info(self):
+#         print('Информация о счете:')
+#         print("-" * 20)
+#         print(f"#{self.num}")
+#         print(f"Владелец: {self.surname}")
+#         self.print_balance()
+#         print(f"Проценты: {self.percent:.0%}")
+#         print("-" * 20)
+#
+#
+# acc = Account("Долгих", "12345", 0.03, 1000)
+# acc.print_info()
+# acc.convert_to_usd()
+# acc.convert_to_eur()
+# Account.set_usd_rate(2)
+# Account.set_eur_rate(3)
+# print()
+# acc.convert_to_usd()
+# acc.convert_to_eur()
+# acc.edit_owner("Дюма")
+# acc.print_info()
+# print()
+# acc.add_percent()
+# print()
+# acc.withdraw_money(100)
+# print()
+# acc.withdraw_money(3000)
+# print()
+# acc.add_money(5000)
+# print()
+# acc.withdraw_money(3000)
+#
+# import re
+#
+#
+# class UserData:
+#     def __init__(self, fio, old, ps, weight):
+#         self.fio = fio
+#         self.old = old
+#         self.password = ps
+#         self.weight = weight
+#
+#     @property
+#     def fio(self):
+#         return self.__fio
+#
+#     @fio.setter
+#     def fio(self, fio):
+#         self.verify_fio(fio)
+#         self.__fio = fio
+#
+#     @property
+#     def old(self):
+#         return self.__old
+#
+#     @old.setter
+#     def old(self, old):
+#         self.verify_old(old)
+#         self.__old = old
+#
+#     @property
+#     def password(self):
+#         return self.__password
+#
+#     @password.setter
+#     def password(self, ps):
+#         self.verify_ps(ps)
+#         self.__password = ps
+#
+#     @property
+#     def weight(self):
+#         return self.__weight
+#
+#     @weight.setter
+#     def weight(self, w):
+#         self.verify_weight(w)
+#         self.__weight = w
+#
+#     @staticmethod
+#     def verify_fio(fio):
+#         if not isinstance(fio, str):
+#             raise TypeError("ФИО должно быть строкой")
+#         f = fio.split()  # ['Волков', 'Игорь', 'Николаевич']
+#         # ['В', 'о', 'л', 'к', 'о', 'в', 'И', 'г', 'о', 'р', 'ь', 'Н', 'и', 'к', 'о', 'л', 'а', 'е', 'в', 'и', 'ч']
+#         # letters = "".join(re.findall("[a-zа-яё-]", fio, re.IGNORECASE))  # ВолковИгорьНиколаевич
+#         # for s in f:
+#         #     if len(s.strip(letters)) != 0:
+#         #         raise TypeError("В ФИО можно использовать только буквы и дефис")
+#         # for s in f:
+#         if re.findall(r'[^a-zа-яё\s-]', fio, re.IGNORECASE):
+#             raise ValueError('Ошибка')
+#
+#         if len(f) != 3:
+#             raise TypeError("Неверный формат ФИО")
+#
+#     @staticmethod
+#     def verify_old(old):
+#         if not isinstance(old, int) or not 14 < old < 120:  # old < 14 or old > 120
+#             raise TypeError("Возраст должен быть целым числом в диапазоне от 14 до 120 лет")
+#
+#     @staticmethod
+#     def verify_weight(w):
+#         if not isinstance(w, float) or w < 20:
+#             raise TypeError("Вес должен быть вещественным числом от 20 кг и выше")
+#
+#     @staticmethod
+#     def verify_ps(ps):
+#         if not isinstance(ps, str):
+#             raise TypeError("Паспорт должен быть строкой")
+#         s = ps.split()  # ['1234', '567890']
+#         if len(s) != 2 or len(s[0]) != 4 or len(s[1]) != 6:
+#             raise TypeError("Неверный формат паспорта")
+#         for p in s:
+#             if not p.isdigit():
+#                 raise TypeError("Серия и номер паспорта должны быть числами")
+#
+#
+# p1 = UserData("Волков Игорь Николаевич", 96, "1234 567890", 80.8)
+# p1.fio = "Волков Игорь Викторович"
+# print(p1.fio)
+# p1.old = 26
+# print(p1.old)
+# p1.weight = 90.5
+# print(p1.weight)
+# p1.password = "9876 543210"
+# print(p1.password)
+
+
+# class Point:  # class Point(object):
+#     def __init__(self, x=0, y=0):
+#         self.__x = x
+#         self.__y = y
+#
+#
+# print(issubclass(Point, object))
+# print(issubclass(Point, int))
+
+
+# class Point:
+#     def __init__(self, x=0, y=0):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __str__(self):
+#         return f"({self.__x}, {self.__y})"
+#
+#
+# class Prop:
+#     def __init__(self, sp: Point, ep: Point, color: str = "red", width: int = 1) -> None:
+#         self._sp = sp
+#         self._ep = ep
+#         self._color = color
+#         self.__width = width
+#         print("Инициализатор базового класса Prop")
+#
+#     def get_width(self):
+#         return self.__width
+#
+#
+# class Line(Prop):
+#     def __init__(self, *args):
+#         super().__init__(*args)
+#         # Prop.__init__(self, *args)
+#         print("Переопределенный инициализатор Line")
+#
+#     def draw_line(self):
+#         print(f"Рисование линии: {self._sp}, {self._ep}, {self._color}, {self.get_width()}")
+
+
+# class Rect(Prop):
+#     def draw_rect(self):
+#         print(f"Рисование прямоугольника: {self._sp}, {self._ep}, {self._color}, {self._width}")
+
+
+# line = Line(Point(1, 2), Point(10, 20), "yellow", 5)
+# line.draw_line()
+# print(line.get_width())
+
+# rect = Rect(Point(30, 40), Point(70, 80))
+# rect.draw_rect()
+
+# DRY (Don't Repeat Yourself) - не повторяйся!!!
+
+
+# class Figure:
+#     def __init__(self, color):
+#         self.__color = color
+#
+#     @property
+#     def color(self):
+#         return self.__color
+#
+#     @color.setter
+#     def color(self, c):
+#         self.__color = c
+#
+#
+# class Rectangle(Figure):
+#     def __init__(self, width, height, color):
+#         self.width = width
+#         self.height = height
+#         super().__init__(color)
+#
+#     @property
+#     def width(self):
+#         return self.__width
+#
+#     @width.setter
+#     def width(self, w):
+#         if w > 0:
+#             self.__width = w
+#         else:
+#             raise ValueError("Некорректное значение ширины")
+#
+#     @property
+#     def height(self):
+#         return self.__height
+#
+#     @height.setter
+#     def height(self, h):
+#         if h > 0:
+#             self.__height = h
+#         else:
+#             raise ValueError("Некорректное значение высоты")
+#
+#     def area(self):
+#         print(f"Площадь {self.color} прямоугольника = ", end="")
+#         return self.__width * self.__height
+#
+#
+# rect = Rectangle(10, 20, "green")
+# # rect.width = 90
+# print(rect.area())
+
+
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __str__(self):
+#         return f"({self.__x}, {self.__y})"
+#
+#     def is_digit(self):
+#         if isinstance(self.__x, (int, float)) and isinstance(self.__y, (int, float)):
+#             return True
+#         return False
+#
+#     def is_int(self):
+#         if isinstance(self.__x, int) and isinstance(self.__y, int):
+#             return True
+#         return False
+#
+#
+# class Prop:
+#     def __init__(self, sp: Point, ep: Point, color: str = "red", width: int = 1) -> None:
+#         self._sp = sp
+#         self._ep = ep
+#         self._color = color
+#         self._width = width
+#
+#     def set_coord(self, sp, ep):
+#         if sp.is_digit() and ep.is_digit():
+#             self._sp = sp
+#             self._ep = ep
+#         else:
+#             print("Координаты должны быть числами")
+#
+#
+# class Line(Prop):
+#     def set_coord(self, sp, ep):
+#         if sp.is_int() and ep.is_int():
+#             self._sp = sp
+#             self._ep = ep
+#         else:
+#             print("Координаты должны быть целочисленными значениями")
+#
+#     def draw_line(self):
+#         print(f"Рисование линии: {self._sp}, {self._ep}, {self._color}, {self._width}")
+#
+#
+# class Rect(Prop):
+#     def draw_rect(self):
+#         print(f"Рисование прямоугольника: {self._sp}, {self._ep}, {self._color}, {self._width}")
+#
+#
+# line = Line(Point(1, 2), Point(10, 20), "yellow", 5)
+# line.set_coord(Point(15, 45), Point(100, 200))
+# line.draw_line()
+#
+# rect = Rect(Point(30, 40), Point(70, 80))
+# rect.set_coord(Point(55.5, 45.6), Point(100, 200))
+# rect.draw_rect()
+
+
+# class Rect:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+#
+#     def show_rect(self):
+#         print(f"Прямоугольник:\nШирина: {self.width}\nВысота: {self.height}")
+#
+#
+# class RectFon(Rect):
+#     def __init__(self, width, height, background):
+#         self.fon = background
+#         super().__init__(width, height)
+#
+#     def show_rect(self):
+#         super().show_rect()
+#         print("Фон:", self.fon)
+#
+#
+# class RectBorder(Rect):
+#     def __init__(self, width, height, size, frame, color):
+#         super().__init__(width, height)
+#         self.size = size
+#         self.frame = frame
+#         self.color = color
+#
+#     def show_rect(self):
+#         super().show_rect()
+#         # print(f'Толщина линий: {self.size}\nРамка: {self.frame}\nЦвет: {self.color}')
+#         print(f'Рамка: {self.size} {self.frame} {self.color}')
+#
+#
+# shape1 = RectFon(400, 200, "yellow")
+# shape1.show_rect()
+# print()
+# shape2 = RectBorder(600, 300, "1px", "solid", "red")
+# shape2.show_rect()
+
+
+# class Rect:
+#     def __init__(self, width, height):
+#         self.width = width
+#         self.height = height
+#
+#     def show_rect(self):
+#         print(f'Прямоугольник:\nширина {self.width}\nВысота {self.height}')
+#
+#
+# class RectFon(Rect):
+#     def __init__(self, width, height, background):
+#         super().__init__(width, height)
+#         self.background = background
+#
+#     def show_rect_with_background(self):
+#         print(f'Прямоугольник с фоном {self.background}:\nширина {self.width}\nВысота {self.height}')
+#
+#
+# shapel = RectFon(400, 200, "yellow")
+# shapel.show_rect_with_background()
+
+# class Vector(list):
+#     # def __init__(self, lst):
+#     #     super().__init__()
+#     #     self.lst = lst
+#
+#     def __str__(self):
+#         return " ".join(map(str, self))
+#
+#
+# v = Vector([1, 2, 3])
+# print(sum(v))
+# print(v)
+# print(type(v))
+
+
+# Перегрузка методов
+
+# class Point:
+#     def __init__(self, x, y):
+#         self.__x = x
+#         self.__y = y
+#
+#     def __str__(self):
+#         return f"({self.__x}, {self.__y})"
+#
+#     def is_digit(self):
+#         if isinstance(self.__x, (int, float)) and isinstance(self.__y, (int, float)):
+#             return True
+#         return False
+#
+#     def is_int(self):
+#         if isinstance(self.__x, int) and isinstance(self.__y, int):
+#             return True
+#         return False
+#
+#
+# class Prop:
+#     def __init__(self, sp: Point, ep: Point, color: str = "red", width: int = 1) -> None:
+#         self._sp = sp
+#         self._ep = ep
+#         self._color = color
+#         self._width = width
+#
+#
+# class Line(Prop):
+#     def draw_line(self):
+#         print(f"Рисование линии: {self._sp}, {self._ep}, {self._color}, {self._width}")
+#
+#     def set_coord(self, sp=None, ep=None):
+#         if ep is None:
+#             if sp.is_int():
+#                 self._sp = sp
+#             else:
+#                 print("Координата sp должна быть целочисленным значением")
+#         if sp is None:
+#             if ep.is_int():
+#                 self._ep = ep
+#             else:
+#                 print("Координата ep должна быть целочисленным значением")
+#         else:
+#             if sp.is_int() and ep.is_int():
+#                 self._sp = sp
+#                 self._ep = ep
+#             else:
+#                 print("Координаты должны быть целочисленными значениями")
+#
+#
+# line = Line(Point(1, 2), Point(10, 20), "yellow", 5)
+# line.draw_line()
+# line.set_coord(Point(15, 45), Point(100, 200))
+# line.draw_line()
+# line.set_coord(Point(55, 55))
+# line.draw_line()
+# line.set_coord(ep=Point(90, 20))
+# line.draw_line()
+
+
+# Абстрактные методы
+
+class Point:
+    def __init__(self, x, y):
+        self.__x = x
+        self.__y = y
+
+    def __str__(self):
+        return f"({self.__x}, {self.__y})"
+
+    def is_digit(self):
+        if isinstance(self.__x, (int, float)) and isinstance(self.__y, (int, float)):
+            return True
+        return False
+
+    def is_int(self):
+        if isinstance(self.__x, int) and isinstance(self.__y, int):
+            return True
+        return False
+
+
+class Prop:
+    def __init__(self, sp: Point, ep: Point, color: str = "red", width: int = 1) -> None:
+        self._sp = sp
+        self._ep = ep
+        self._color = color
+        self._width = width
+
+    def draw(self):
+        raise NotImplementedError("В дочернем классе должен быть определен метод draw()")
+
+
+class Line(Prop):
+    def draw(self):
+        print(f"Рисование линии: {self._sp}, {self._ep}, {self._color}, {self._width}")
+
+
+class Rect(Prop):
+    def draw(self):
+        print(f"Рисование прямоугольника: {self._sp}, {self._ep}, {self._color}, {self._width}")
+
+
+class Ellipse(Prop):
+    def draw(self):
+        print(f"Рисование эллипса: {self._sp}, {self._ep}, {self._color}, {self._width}")
+    ...
+
+
+figs = list()
+figs.append(Line(Point(0, 0), Point(10, 10)))
+figs.append(Line(Point(10, 10), Point(20, 10)))
+figs.append(Rect(Point(50, 50), Point(100, 100)))
+figs.append(Ellipse(Point(-10, -10), Point(10, 10)))
+
+for f in figs:
+    f.draw()

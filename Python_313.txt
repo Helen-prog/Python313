@@ -119,4 +119,34 @@ git push -u origin master
 
 ceb3bafab983bc38d9bb392a09675cb6e8beecb7
 
+1) git add .
+2) git commit -m "added print"
+3) git push
+
+git clone https://github.com/Helen-prog/Python313.git
+
+git pull
+- забираем изменения с удаленного репозитория в локальный
+
+
+test.txt
+
+
+свойства (поля, переменные)
+	- статическе
+	- динамические
+методы (функции)
+	- экземпляра класса (self)
+	- статические ()
+	- класса (cls)
+
+Модификаторы доступа
+public -      name
+protected -  _name
+private -   __name
+
+
+5! = 1 * 2 * 3 * 4 * 5 = 120
+
+
 
