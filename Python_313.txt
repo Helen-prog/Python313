@@ -148,5 +148,119 @@ private -   __name
 
 5! = 1 * 2 * 3 * 4 * 5 = 120
 
+main.py
+
+Модули
+Пакеты
+
+geometry
+	rect.py
+	sq.py
+	trian.py
+	
+import sys
+sys.path
+
+math
+
+car
+	__init__.py
+	carclass.py
+	electrocar.py
+	
+Упоковка данных
+
+сериализация 
+десериализация
+
+
+1. marshal (*.pyc)
+2. pickle
+3. json
+
+dump() - сохраняет данные в открытый файл
+dumps() - сохраняет данные в строку
+
+load() - cчитывает данные из файла
+loads() - cчитывает данные из строки
+
+
+{
+  {
+    "name": "ffgggae",
+    "tel": "0703526611"
+  },
+  {
+    "name": "fefacea",
+    "tel": "5895717390"
+  }
+}
+
+{
+	"ГК Python": {
+		"Nikolaenko": [2, 3, 5, 4, 2],
+		"Bodnya": [5, 4, 3, 4, 5, 3]
+	}
+	"ГК Web": {
+		"Birukov": [3, 5, 3, 2, 5, 4]
+	}
+}
+
+data = {
+	"ГК Python":{
+		"Nikolaenko": [2, 3, 5, 4, 2],
+		"Bodnya": [5, 4, 3, 4, 5, 3]
+	}
+}
+
+stud_list = {
+	"Nikolaenko": [2, 3, 5, 4, 2],
+	"Bodnya": [5, 4, 3, 4, 5, 3]
+}
+
+pip install requests
+
+(venv)
+
+
+data.csv
+
+Имя,Профессия,Год рождения
+Виктор,Веб-дизайнер,1995
+Игорь,Программист,1983
+
+csv.reader() - []
+csv.DictReader() - {}
+
+csv.writer() - []
+csv.DictWriter() - {}
+
+
+pip install beautifulsoup4 или bs4
+
+pip install lxml
+
+https://ru.wordpress.org/plugins/browse/blocks/page/1/
+https://ru.wordpress.org/plugins/browse/blocks/page/2/
+https://ru.wordpress.org/plugins/browse/blocks/page/3/
+
+https://ru.wordpress.org/plugins/browse/blocks/page/24/
+
+
+MVC (Model View Controller)
+Модель Представление Контроллер 
+
+• Модель — этот компонент отвечает за данные, а также определяет структуру
+приложения. Например, если вы создаете To-Do приложение, код компонента model
+будет определять список задач и отдельные задачи.
+• Представление — этот компонент отвечает за взаимодействие с пользователем. То есть
+код компонента view определяет внешний вид приложения и способы его
+использования.
+• Контроллер — этот компонент отвечает за связь между model и view. Код компонента
+controller определяет, как сайт реагирует на действия пользователя. По сути, это мозг
+MVC-приложения.
+
+
+
 
 
