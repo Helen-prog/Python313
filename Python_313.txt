@@ -378,5 +378,114 @@ SELECT столбцы
 FROM таблица1 LEFT JOIN таблица2 ON условие1
 
 
+cars = [
+ {'model': 'Audi', 'price': 23000},
+ {'model': 'Skoda', 'price': 17300},
+ {'model': 'Renault', 'price': 44300},
+ {'model': 'Wolksvagen', 'price': 21300}
+]
 
 
+
+persons = [
+ {"name": "Алексей", "year": 18, "weight": 78.5},
+ {"name": "Никита", "year": 28, "weight": 82.3},
+ {"name": "Виталий", "year": 33, "weight": 94.0}
+]
+
+templates
+	header.html
+	main.html
+	footer.html
+	
+	dialog.html
+	
+	index.html
+	
+	about.html
+	page.html
+	
+	
+Flask
+Django
+
+pip install Flask
+
+http://127.0.0.1:5000/
+http://127.0.0.1:5000/index
+
+
+templates
+	base.html
+	index.html
+	about.html
+	contact.html
+	page404.html
+	login.html
+static
+	css
+		style.css
+	
+http://127.0.0.1:5000/profile/user/5
+http://127.0.0.1:5000/login
+
+
+int - только цифры
+float - только вещественные цисла
+path - любые допустимые символы URL + "/"
+
+
+• flash() – формирование сообщения пользователю;
+• get_flashed_messages() – обработка сформированных сообщений в шаблоне документа.
+
+
+import os
+os.urandom(20).hex()
+
+from fldbsite.fldbsite import create_db
+create_db()
+
+templates
+	base.html
+	index.html
+	add_post.html
+	post.html
+
+
+http://127.0.0.1:5000/post/1
+
+http://127.0.0.1:5000/post/framework-flask-intro
+
+
+pip install django
+
+
+django-admin startproject password_generator_project
+- создание нового проекта
+
+python manage.py runserver
+- запуск сервера
+
+http://127.0.0.1:8000/
+
+python manage.py runserver 4000
+python manage.py runserver 1.2.3.4:4000
+
+python manage.py startapp generator
+- создание нового приложения
+
+
+generator
+	templates
+		generator
+			home.html
+			password.html
+			base.html
+	static
+		css
+			style.css
+			
+			
+			
+			
+http://127.0.0.1:8000/?length=2
