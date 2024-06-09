@@ -489,3 +489,42 @@ generator
 			
 			
 http://127.0.0.1:8000/?length=2
+
+django-admin startproject personal_portfolio
+
+python manage.py startapp skills
+python manage.py startapp blog
+
+second
+
+
+pip install Pillow
+
+python manage.py makemigrations
+python manage.py migrate
+
+python manage.py createsuperuser
+
+
+http://127.0.0.1:8000/
+http://127.0.0.1:8000/blog/
+http://127.0.0.1:8000/blog/1
+
+
+third
+
+django-admin startproject todos
+python manage.py startapp todo
+
+python manage.py migrate
+python manage.py createsuperuser
+
+models.CASCADE - если пользователь будет удален, то все его задачи удалятся
+models.PROTECT - запрещает удалять пользователя, пока у него есть задачи
+models.SET_NULL - задачи останутся в БД, даже при удалении пользователя, но значение в поле задачи изменится на None
+model.SET_DEFAULT - задачи останутся в БД, даже при удалении пользователя, но значение в поле задачи изменится на значение заданное по умолчанию
+
+python manage.py makemigrations
+python manage.py migrate
+
+forms.py
