@@ -548,3 +548,6 @@ python manage.py shell
 
 from projects.models import Project
 quit()
+
+utils.py
+
