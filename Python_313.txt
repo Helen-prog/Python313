@@ -550,4 +550,21 @@ from projects.models import Project
 quit()
 
 utils.py
+pagination.html
+
+projects -> queryset
+
+http://127.0.0.1:8000/projects/?page=5
+http://127.0.0.1:8000/projects/?page=3
+
+http://127.0.0.1:8000/projects/?search_query=web
+http://127.0.0.1:8000/projects/?page=2
+
+http://127.0.0.1:8000/projects/?search_query=web&page=2
+http://127.0.0.1:8000/projects/?search_query=web&page=3
+
+http://127.0.0.1:8000/?search_query=dev&page=2
+
+
+
 
