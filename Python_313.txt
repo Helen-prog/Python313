@@ -566,5 +566,6 @@ http://127.0.0.1:8000/projects/?search_query=web&page=3
 http://127.0.0.1:8000/?search_query=dev&page=2
 
 
-
-
+fifth
+django-admin startproject programming_blog
+python manage.py startapp blog
