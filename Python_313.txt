@@ -569,3 +569,13 @@ http://127.0.0.1:8000/?search_query=dev&page=2
 fifth
 django-admin startproject programming_blog
 python manage.py startapp blog
+
+
+utils.py
+
+file:///D:/Java313/JavaScript/file.php?title=qqq&text=www
+file:///D:/Java313/JavaScript/index.html
+
+file:///D:/Java313/JavaScript/index.html
+
+https://cdn4.iconfinder.com/
